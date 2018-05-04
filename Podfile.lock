@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.7.0)
+  - FlowKit (0.2.0)
+  - Kingfisher (4.6.3)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - FlowKit
+  - Kingfisher
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  FlowKit: 8018de5663657d2bfcd1a22b690d7862f3dd890f
+  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 7a4e3f542713453604a1a5ca0cacd79a070e2c5b
+
+COCOAPODS: 1.4.0
