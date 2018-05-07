@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoginView" customModule="CoordinatorQiitaClient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvU-2a-m2q">
+                    <rect key="frame" x="97" y="298.5" width="180" height="30"/>
+                    <color key="backgroundColor" red="0.37647058820000001" green="0.75294117650000003" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="7nt-Kz-e6c"/>
+                        <constraint firstAttribute="height" constant="30" id="Kl9-Su-P66"/>
+                    </constraints>
+                    <state key="normal" title="Qiitaで認証する">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9U-Pe-tu7">
+                    <rect key="frame" x="144" y="343.5" width="86" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="3ya-Dx-bCe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="認証せずに使う"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="G9U-Pe-tu7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1ri-53-bWL"/>
+                <constraint firstItem="G9U-Pe-tu7" firstAttribute="top" secondItem="lvU-2a-m2q" secondAttribute="bottom" constant="15" id="Xle-MZ-RVU"/>
+                <constraint firstItem="lvU-2a-m2q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cic-Md-kfb"/>
+                <constraint firstItem="lvU-2a-m2q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-20" id="khj-7x-Fih"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="loginButton" destination="lvU-2a-m2q" id="NSk-gw-PSb"/>
+                <outlet property="skipAuthButton" destination="G9U-Pe-tu7" id="C4Q-ed-8bZ"/>
+            </connections>
+        </view>
+    </objects>
+</document>

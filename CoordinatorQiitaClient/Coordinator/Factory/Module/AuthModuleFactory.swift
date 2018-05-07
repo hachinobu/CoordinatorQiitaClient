@@ -1,5 +1,5 @@
 //
-//  CoordinatorFinishFlowType.swift
+//  AuthModuleFactory.swift
 //  CoordinatorQiitaClient
 //
 //  Created by Takahiro Nishinobu on 2018/05/07.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CoordinatorFinishFlowType: class {
-    var finishFlow: (() -> Void)? { get set }
+protocol AuthModuleFactory {
+    func generateLoginView() -> LoginViewOutput
 }

@@ -48,6 +48,15 @@
 		AD2E9A3A209FF76600B4BE4D /* RouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A39209FF76600B4BE4D /* RouterImpl.swift */; };
 		AD2E9A42209FFC0A00B4BE4D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A41209FFC0A00B4BE4D /* BaseView.swift */; };
 		AD2E9A44209FFC5F00B4BE4D /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A43209FFC5F00B4BE4D /* LoginViewOutput.swift */; };
+		AD2E9A4C209FFFCB00B4BE4D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A4B209FFFCB00B4BE4D /* LoginView.swift */; };
+		AD2E9A4E209FFFDD00B4BE4D /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2E9A4D209FFFDD00B4BE4D /* LoginView.xib */; };
+		AD2E9A5220A0061800B4BE4D /* AuthModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5120A0061800B4BE4D /* AuthModuleFactory.swift */; };
+		AD2E9A5420A0065200B4BE4D /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5320A0065200B4BE4D /* ModuleFactory.swift */; };
+		AD2E9A5620A0076B00B4BE4D /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5520A0076B00B4BE4D /* AuthCoordinator.swift */; };
+		AD2E9A5920A0081E00B4BE4D /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5820A0081E00B4BE4D /* CoordinatorFactory.swift */; };
+		AD2E9A5B20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5A20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift */; };
+		AD2E9A5D20A00F0100B4BE4D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5C20A00F0100B4BE4D /* ApplicationCoordinator.swift */; };
+		AD2E9A5F20A0171A00B4BE4D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5E20A0171A00B4BE4D /* AuthViewController.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +117,15 @@
 		AD2E9A39209FF76600B4BE4D /* RouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterImpl.swift; sourceTree = "<group>"; };
 		AD2E9A41209FFC0A00B4BE4D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AD2E9A43209FFC5F00B4BE4D /* LoginViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
+		AD2E9A4B209FFFCB00B4BE4D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AD2E9A4D209FFFDD00B4BE4D /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		AD2E9A5120A0061800B4BE4D /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
+		AD2E9A5320A0065200B4BE4D /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		AD2E9A5520A0076B00B4BE4D /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		AD2E9A5820A0081E00B4BE4D /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		AD2E9A5A20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryImpl.swift; sourceTree = "<group>"; };
+		AD2E9A5C20A00F0100B4BE4D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		AD2E9A5E20A0171A00B4BE4D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +180,8 @@
 		AD2E99BC209988D800B4BE4D /* CoordinatorQiitaClient */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A4A209FFFAF00B4BE4D /* View */,
+				AD2E9A45209FFD6D00B4BE4D /* Controller */,
 				AD2E9A2D209FF60900B4BE4D /* Coordinator */,
 				AD2E9A1C209FF16300B4BE4D /* Extension */,
 				AD2E99DD209C67F500B4BE4D /* Model */,
@@ -252,11 +272,13 @@
 		AD2E9A2D209FF60900B4BE4D /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A4F20A005FB00B4BE4D /* Factory */,
 				AD2E9A3B209FFB2500B4BE4D /* Flows */,
 				AD2E9A34209FF6FF00B4BE4D /* Router */,
 				AD2E9A2E209FF62500B4BE4D /* BaseCoordinator.swift */,
 				AD2E9A30209FF63700B4BE4D /* Coordinator.swift */,
 				AD2E9A32209FF6A600B4BE4D /* CoordinatorFinishFlowType.swift */,
+				AD2E9A5C20A00F0100B4BE4D /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -284,8 +306,53 @@
 			isa = PBXGroup;
 			children = (
 				AD2E9A43209FFC5F00B4BE4D /* LoginViewOutput.swift */,
+				AD2E9A5520A0076B00B4BE4D /* AuthCoordinator.swift */,
 			);
 			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		AD2E9A45209FFD6D00B4BE4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A5E20A0171A00B4BE4D /* AuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD2E9A4A209FFFAF00B4BE4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A4B209FFFCB00B4BE4D /* LoginView.swift */,
+				AD2E9A4D209FFFDD00B4BE4D /* LoginView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD2E9A4F20A005FB00B4BE4D /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A5720A0081000B4BE4D /* Coordinator */,
+				AD2E9A5020A0060500B4BE4D /* Module */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		AD2E9A5020A0060500B4BE4D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A5120A0061800B4BE4D /* AuthModuleFactory.swift */,
+				AD2E9A5320A0065200B4BE4D /* ModuleFactory.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		AD2E9A5720A0081000B4BE4D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A5820A0081E00B4BE4D /* CoordinatorFactory.swift */,
+				AD2E9A5A20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		D846FC480BB7DD7E1D240E6C /* Pods */ = {
@@ -383,6 +450,7 @@
 			files = (
 				AD2E99C8209988DB00B4BE4D /* LaunchScreen.storyboard in Resources */,
 				AD2E99C5209988DB00B4BE4D /* Assets.xcassets in Resources */,
+				AD2E9A4E209FFFDD00B4BE4D /* LoginView.xib in Resources */,
 				AD2E99C3209988D800B4BE4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,11 +533,16 @@
 				AD2E9A06209CB1A800B4BE4D /* APIHelper.swift in Sources */,
 				AD2E9A0D209CBA5D00B4BE4D /* ItemAPI.swift in Sources */,
 				AD2E9A11209CC4C100B4BE4D /* AuthenticationInfo.swift in Sources */,
+				AD2E9A5620A0076B00B4BE4D /* AuthCoordinator.swift in Sources */,
+				AD2E9A5D20A00F0100B4BE4D /* ApplicationCoordinator.swift in Sources */,
 				AD2E9A1E209FF17E00B4BE4D /* NSObject+Ex.swift in Sources */,
 				AD2E9A20209FF19D00B4BE4D /* UITableView+Ex.swift in Sources */,
 				AD2E9A15209CC7C000B4BE4D /* UserAPI.swift in Sources */,
+				AD2E9A5B20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift in Sources */,
 				AD2E9A03209CB1A800B4BE4D /* JSONEncodableEncoding.swift in Sources */,
 				AD2E9A02209CB1A800B4BE4D /* CodableHelper.swift in Sources */,
+				AD2E9A5220A0061800B4BE4D /* AuthModuleFactory.swift in Sources */,
+				AD2E9A5420A0065200B4BE4D /* ModuleFactory.swift in Sources */,
 				AD2E9A00209CB1A700B4BE4D /* AlamofireImplementations.swift in Sources */,
 				AD2E9A38209FF73F00B4BE4D /* Router.swift in Sources */,
 				AD2E9A0A209CB8B000B4BE4D /* Item.swift in Sources */,
@@ -480,11 +553,13 @@
 				AD2E9A28209FF24F00B4BE4D /* URLRequest+Ex.swift in Sources */,
 				AD2E9A44209FFC5F00B4BE4D /* LoginViewOutput.swift in Sources */,
 				AD2E99C0209988D800B4BE4D /* ViewController.swift in Sources */,
+				AD2E9A5F20A0171A00B4BE4D /* AuthViewController.swift in Sources */,
 				AD2E99BE209988D800B4BE4D /* AppDelegate.swift in Sources */,
 				AD2E9A05209CB1A800B4BE4D /* JSONEncodingHelper.swift in Sources */,
 				AD2E9A04209CB1A800B4BE4D /* Configuration.swift in Sources */,
 				AD2E9A26209FF22600B4BE4D /* StoryboardInstantiatable.swift in Sources */,
 				AD2E9A36209FF71500B4BE4D /* Presentable.swift in Sources */,
+				AD2E9A5920A0081E00B4BE4D /* CoordinatorFactory.swift in Sources */,
 				AD2E9A3A209FF76600B4BE4D /* RouterImpl.swift in Sources */,
 				AD2E9A22209FF1BC00B4BE4D /* UICollectionView+Ex.swift in Sources */,
 				AD2E99FE209CB1A700B4BE4D /* APIs.swift in Sources */,
@@ -496,6 +571,7 @@
 				AD2E9A2F209FF62500B4BE4D /* BaseCoordinator.swift in Sources */,
 				AD2E9A24209FF1FB00B4BE4D /* NibInstantiatable.swift in Sources */,
 				AD2E9A2C209FF2AB00B4BE4D /* UserDefaults+Ex.swift in Sources */,
+				AD2E9A4C209FFFCB00B4BE4D /* LoginView.swift in Sources */,
 				AD2E9A01209CB1A700B4BE4D /* Models.swift in Sources */,
 				AD2E9A08209CB86800B4BE4D /* Tag.swift in Sources */,
 			);

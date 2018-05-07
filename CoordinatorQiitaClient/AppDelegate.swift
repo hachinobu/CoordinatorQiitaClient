@@ -12,17 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private lazy var rootController: UINavigationController = .init()
+    private lazy var applicationCoordinator: Coordinator = {
+        ApplicationCoordinator(router: RouterImpl(rootController: self.rootController), coordinatorFactory: CoordinatorFactoryImpl())
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        ItemAPI.fetchItemsByPageInfo { (items, error) in
-            if let items = items {
-                print(items.count)
-            } else {
-                print(error!)
-            }
-        }
+        window = UIWindow()
+        window?.rootViewController = rootController
+        applicationCoordinator.start()
+        window?.makeKeyAndVisible()
         return true
     }
 

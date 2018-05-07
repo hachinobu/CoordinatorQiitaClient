@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LoginViewOutput: BaseView {
-    var onCompleteAuth: (() -> Void)? { get }
-    var onSkipAuth: (() -> Void)? { get }
-    var onLoginButtonTap: (() -> Void)? { get }
+    var onCompleteAuth: ((String) -> Void)? { get set }
+    var onSkipAuth: (() -> Void)? { get set }
+    var onLoginButtonTap: (() -> Void)? { get set }
 }
