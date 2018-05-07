@@ -32,6 +32,14 @@
 		AD2E9A15209CC7C000B4BE4D /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A14209CC7C000B4BE4D /* UserAPI.swift */; };
 		AD2E9A17209F0CA800B4BE4D /* TagAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A16209F0CA800B4BE4D /* TagAPI.swift */; };
 		AD2E9A1B209FECF100B4BE4D /* LikeUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A1A209FECF100B4BE4D /* LikeUserAPI.swift */; };
+		AD2E9A1E209FF17E00B4BE4D /* NSObject+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A1D209FF17E00B4BE4D /* NSObject+Ex.swift */; };
+		AD2E9A20209FF19D00B4BE4D /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A1F209FF19D00B4BE4D /* UITableView+Ex.swift */; };
+		AD2E9A22209FF1BC00B4BE4D /* UICollectionView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A21209FF1BC00B4BE4D /* UICollectionView+Ex.swift */; };
+		AD2E9A24209FF1FB00B4BE4D /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A23209FF1FB00B4BE4D /* NibInstantiatable.swift */; };
+		AD2E9A26209FF22600B4BE4D /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A25209FF22600B4BE4D /* StoryboardInstantiatable.swift */; };
+		AD2E9A28209FF24F00B4BE4D /* URLRequest+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A27209FF24F00B4BE4D /* URLRequest+Ex.swift */; };
+		AD2E9A2A209FF27200B4BE4D /* Sequence+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A29209FF27200B4BE4D /* Sequence+Ex.swift */; };
+		AD2E9A2C209FF2AB00B4BE4D /* UserDefaults+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A2B209FF2AB00B4BE4D /* UserDefaults+Ex.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +84,14 @@
 		AD2E9A14209CC7C000B4BE4D /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		AD2E9A16209F0CA800B4BE4D /* TagAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagAPI.swift; sourceTree = "<group>"; };
 		AD2E9A1A209FECF100B4BE4D /* LikeUserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeUserAPI.swift; sourceTree = "<group>"; };
+		AD2E9A1D209FF17E00B4BE4D /* NSObject+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ex.swift"; sourceTree = "<group>"; };
+		AD2E9A1F209FF19D00B4BE4D /* UITableView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ex.swift"; sourceTree = "<group>"; };
+		AD2E9A21209FF1BC00B4BE4D /* UICollectionView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ex.swift"; sourceTree = "<group>"; };
+		AD2E9A23209FF1FB00B4BE4D /* NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
+		AD2E9A25209FF22600B4BE4D /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
+		AD2E9A27209FF24F00B4BE4D /* URLRequest+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Ex.swift"; sourceTree = "<group>"; };
+		AD2E9A29209FF27200B4BE4D /* Sequence+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Ex.swift"; sourceTree = "<group>"; };
+		AD2E9A2B209FF2AB00B4BE4D /* UserDefaults+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ex.swift"; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +146,7 @@
 		AD2E99BC209988D800B4BE4D /* CoordinatorQiitaClient */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A1C209FF16300B4BE4D /* Extension */,
 				AD2E99DD209C67F500B4BE4D /* Model */,
 				AD2E99BD209988D800B4BE4D /* AppDelegate.swift */,
 				AD2E99BF209988D800B4BE4D /* ViewController.swift */,
@@ -198,6 +215,21 @@
 				AD2E9A1A209FECF100B4BE4D /* LikeUserAPI.swift */,
 			);
 			path = APIs;
+			sourceTree = "<group>";
+		};
+		AD2E9A1C209FF16300B4BE4D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A1D209FF17E00B4BE4D /* NSObject+Ex.swift */,
+				AD2E9A1F209FF19D00B4BE4D /* UITableView+Ex.swift */,
+				AD2E9A21209FF1BC00B4BE4D /* UICollectionView+Ex.swift */,
+				AD2E9A23209FF1FB00B4BE4D /* NibInstantiatable.swift */,
+				AD2E9A25209FF22600B4BE4D /* StoryboardInstantiatable.swift */,
+				AD2E9A27209FF24F00B4BE4D /* URLRequest+Ex.swift */,
+				AD2E9A29209FF27200B4BE4D /* Sequence+Ex.swift */,
+				AD2E9A2B209FF2AB00B4BE4D /* UserDefaults+Ex.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D846FC480BB7DD7E1D240E6C /* Pods */ = {
@@ -377,6 +409,8 @@
 				AD2E9A06209CB1A800B4BE4D /* APIHelper.swift in Sources */,
 				AD2E9A0D209CBA5D00B4BE4D /* ItemAPI.swift in Sources */,
 				AD2E9A11209CC4C100B4BE4D /* AuthenticationInfo.swift in Sources */,
+				AD2E9A1E209FF17E00B4BE4D /* NSObject+Ex.swift in Sources */,
+				AD2E9A20209FF19D00B4BE4D /* UITableView+Ex.swift in Sources */,
 				AD2E9A15209CC7C000B4BE4D /* UserAPI.swift in Sources */,
 				AD2E9A03209CB1A800B4BE4D /* JSONEncodableEncoding.swift in Sources */,
 				AD2E9A02209CB1A800B4BE4D /* CodableHelper.swift in Sources */,
@@ -384,14 +418,20 @@
 				AD2E9A0A209CB8B000B4BE4D /* Item.swift in Sources */,
 				AD2E99FF209CB1A700B4BE4D /* Extensions.swift in Sources */,
 				AD2E9A17209F0CA800B4BE4D /* TagAPI.swift in Sources */,
+				AD2E9A2A209FF27200B4BE4D /* Sequence+Ex.swift in Sources */,
+				AD2E9A28209FF24F00B4BE4D /* URLRequest+Ex.swift in Sources */,
 				AD2E99C0209988D800B4BE4D /* ViewController.swift in Sources */,
 				AD2E99BE209988D800B4BE4D /* AppDelegate.swift in Sources */,
 				AD2E9A05209CB1A800B4BE4D /* JSONEncodingHelper.swift in Sources */,
 				AD2E9A04209CB1A800B4BE4D /* Configuration.swift in Sources */,
+				AD2E9A26209FF22600B4BE4D /* StoryboardInstantiatable.swift in Sources */,
+				AD2E9A22209FF1BC00B4BE4D /* UICollectionView+Ex.swift in Sources */,
 				AD2E99FE209CB1A700B4BE4D /* APIs.swift in Sources */,
 				AD2E99E0209C6A3A00B4BE4D /* User.swift in Sources */,
 				AD2E9A13209CC59900B4BE4D /* AuthAPI.swift in Sources */,
 				AD2E9A0F209CC11000B4BE4D /* LikeUser.swift in Sources */,
+				AD2E9A24209FF1FB00B4BE4D /* NibInstantiatable.swift in Sources */,
+				AD2E9A2C209FF2AB00B4BE4D /* UserDefaults+Ex.swift in Sources */,
 				AD2E9A01209CB1A700B4BE4D /* Models.swift in Sources */,
 				AD2E9A08209CB86800B4BE4D /* Tag.swift in Sources */,
 			);
