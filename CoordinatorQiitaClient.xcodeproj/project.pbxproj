@@ -57,6 +57,7 @@
 		AD2E9A5B20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5A20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift */; };
 		AD2E9A5D20A00F0100B4BE4D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5C20A00F0100B4BE4D /* ApplicationCoordinator.swift */; };
 		AD2E9A5F20A0171A00B4BE4D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A5E20A0171A00B4BE4D /* AuthViewController.swift */; };
+		AD2E9A6320A0561100B4BE4D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A6220A0561100B4BE4D /* Config.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		AD2E9A5A20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryImpl.swift; sourceTree = "<group>"; };
 		AD2E9A5C20A00F0100B4BE4D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		AD2E9A5E20A0171A00B4BE4D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		AD2E9A6220A0561100B4BE4D /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				AD2E99DE209C68B100B4BE4D /* SwaggersAPI */,
+				AD2E9A6220A0561100B4BE4D /* Config.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				AD2E9A0F209CC11000B4BE4D /* LikeUser.swift in Sources */,
 				AD2E9A2F209FF62500B4BE4D /* BaseCoordinator.swift in Sources */,
 				AD2E9A24209FF1FB00B4BE4D /* NibInstantiatable.swift in Sources */,
+				AD2E9A6320A0561100B4BE4D /* Config.swift in Sources */,
 				AD2E9A2C209FF2AB00B4BE4D /* UserDefaults+Ex.swift in Sources */,
 				AD2E9A4C209FFFCB00B4BE4D /* LoginView.swift in Sources */,
 				AD2E9A01209CB1A700B4BE4D /* Models.swift in Sources */,

@@ -10,6 +10,8 @@ import Foundation
 
 final class ApplicationCoordinator: BaseCoordinator {
     
+    private var finishLoagin: Bool = false
+    
     private let router: Router
     private let coordinatorFactory: CoordinatorFactory
     
@@ -19,7 +21,11 @@ final class ApplicationCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        runLoginFlow()
+        if finishLoagin {
+            
+        } else {
+            runLoginFlow()
+        }
     }
     
 }
@@ -30,6 +36,8 @@ extension ApplicationCoordinator {
         let coordinator = coordinatorFactory.generateAuthCoordinator(router: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.removeDependency(coordinator)
+            self?.finishLoagin = true
+            self?.start()
         }
         addDependency(coordinator)
         coordinator.start()

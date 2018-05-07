@@ -33,14 +33,15 @@ final class AuthCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         let loginView = moduleFactory.generateLoginView()
         
         loginView.onSkipAuth = { [weak self] in
-            print("skip")
+            self?.finishFlow?()
         }
         
         loginView.onLoginButtonTap = { [weak self] in
-            print("login tap")
+            self?.authQiita()
         }
         
         loginView.onCompleteAuth = { [weak self] token in
+            UserDefaults.StringType.set(value: token, key: .accessToken)
             self?.finishFlow?()
         }
         
@@ -52,7 +53,31 @@ final class AuthCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
 extension AuthCoordinator {
     
     private func authQiita() {
+        let url: URL = URL(string:"http://qiita.com/api/v2/oauth/authorize?client_id=\(Config.AuthInfo.clientId)&scope=read_qiita+write_qiita&state=\(Config.AuthInfo.accessTokenState)")!
+        print(url.absoluteString)
+        authSession = SFAuthenticationSession(url: url, callbackURLScheme: Config.AuthInfo.redirectUrlScheme) { [weak self] (url, error) in
+            if let url = url, let code = self?.fetchAuthoriedCode(url: url) {
+                let body = Auth.PostBody(clientId: Config.AuthInfo.clientId, clientSecret: Config.AuthInfo.clientSecret, code: code)
+                NotificationCenter.default.post(name: NSNotification.Name.Auth.CompleteAuthCode, object: nil, userInfo: [Config.Key.authPostBody: body])
+            }
+        }
+        authSession?.start()
+    }
+    
+    private func fetchAuthoriedCode(url: URL) -> String? {
+        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
+        guard let scheme = urlComponents?.scheme, scheme.hasPrefix(Config.AuthInfo.redirectUrlScheme),
+            let queryItems = urlComponents?.queryItems else { return nil }
         
+        let query = queryItems.reduce(into: [String: String]()) { (result, item) in
+            let value = item.value ?? ""
+            result[item.name] = value
+        }
+        
+        guard let code = query["code"], let state = query["state"],
+            state == Config.AuthInfo.accessTokenState else { fatalError("") }
+        
+        return code
     }
     
 }
