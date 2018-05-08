@@ -17,3 +17,9 @@ extension ModuleFactory: AuthModuleFactory {
     }
 }
 
+extension ModuleFactory: TabModuleFactory {
+    func generateTabView(with selected: TabbarController.SelectTab) -> TabViewOutput {
+        let view = TabbarController(tab: selected)
+        return view
+    }
+}

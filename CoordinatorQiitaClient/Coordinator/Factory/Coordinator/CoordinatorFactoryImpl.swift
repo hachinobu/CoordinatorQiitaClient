@@ -17,4 +17,9 @@ final class CoordinatorFactoryImpl: CoordinatorFactory {
         return coordinator
     }
     
+    func generateTabBarCoordinator(router: Router) -> Coordinator & CoordinatorFinishFlowType {
+        let coordinator = TabbarCoordinator(moduleFactory: ModuleFactory(), coordinatorFactory: CoordinatorFactoryImpl(), router: router)
+        return coordinator
+    }
+    
 }
