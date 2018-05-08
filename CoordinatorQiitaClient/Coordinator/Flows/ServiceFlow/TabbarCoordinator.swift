@@ -58,7 +58,16 @@ final class TabbarCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
 extension TabbarCoordinator {
     
     private func runItemTabFlow(with navigationController: UINavigationController) {
-        
+        guard navigationController.viewControllers.isEmpty else {
+            return
+        }
+        let coordinator = coordinatorFactory.generateItemCoordinator(navigationController: navigationController)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.removeDependency(coordinator)
+            coordinator?.start()
+        }
+        addDependency(coordinator)
+        coordinator.start()
     }
     
     private func runTagTabFlow(with navigationController: UINavigationController) {

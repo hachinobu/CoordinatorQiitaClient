@@ -62,6 +62,15 @@
 		AD2E9A6C20A18A5000B4BE4D /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A6B20A18A5000B4BE4D /* TabbarController.swift */; };
 		AD2E9A6E20A18E2900B4BE4D /* TabModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A6D20A18E2900B4BE4D /* TabModuleFactory.swift */; };
 		AD2E9A7020A18EAB00B4BE4D /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A6F20A18EAB00B4BE4D /* TabbarCoordinator.swift */; };
+		AD2E9A7320A1948600B4BE4D /* ItemModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A7220A1948600B4BE4D /* ItemModuleFactory.swift */; };
+		AD2E9A7620A194DB00B4BE4D /* ItemListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A7520A194DB00B4BE4D /* ItemListViewOutput.swift */; };
+		AD2E9A7820A195DC00B4BE4D /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A7720A195DC00B4BE4D /* ItemListViewController.swift */; };
+		AD2E9A7C20A1980100B4BE4D /* ItemListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2E9A7A20A1980100B4BE4D /* ItemListTableCell.xib */; };
+		AD2E9A7D20A1980100B4BE4D /* ItemListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A7B20A1980100B4BE4D /* ItemListTableCell.swift */; };
+		AD2E9A8020A1B06300B4BE4D /* ItemListTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A7F20A1B06300B4BE4D /* ItemListTableCellModel.swift */; };
+		AD2E9A8320A1CCFD00B4BE4D /* Translatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8220A1CCFD00B4BE4D /* Translatable.swift */; };
+		AD2E9A8520A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */; };
+		AD2E9A8720A1D14200B4BE4D /* ItemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8620A1D14200B4BE4D /* ItemCoordinator.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +145,15 @@
 		AD2E9A6B20A18A5000B4BE4D /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		AD2E9A6D20A18E2900B4BE4D /* TabModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModuleFactory.swift; sourceTree = "<group>"; };
 		AD2E9A6F20A18EAB00B4BE4D /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
+		AD2E9A7220A1948600B4BE4D /* ItemModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModuleFactory.swift; sourceTree = "<group>"; };
+		AD2E9A7520A194DB00B4BE4D /* ItemListViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewOutput.swift; sourceTree = "<group>"; };
+		AD2E9A7720A195DC00B4BE4D /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		AD2E9A7A20A1980100B4BE4D /* ItemListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemListTableCell.xib; sourceTree = "<group>"; };
+		AD2E9A7B20A1980100B4BE4D /* ItemListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListTableCell.swift; sourceTree = "<group>"; };
+		AD2E9A7F20A1B06300B4BE4D /* ItemListTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableCellModel.swift; sourceTree = "<group>"; };
+		AD2E9A8220A1CCFD00B4BE4D /* Translatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translatable.swift; sourceTree = "<group>"; };
+		AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableCellModelTranslator.swift; sourceTree = "<group>"; };
+		AD2E9A8620A1D14200B4BE4D /* ItemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCoordinator.swift; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +235,8 @@
 		AD2E99DD209C67F500B4BE4D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A8120A1CCA300B4BE4D /* Translator */,
+				AD2E9A7E20A1B04600B4BE4D /* ViewModel */,
 				AD2E99DE209C68B100B4BE4D /* SwaggersAPI */,
 				AD2E9A6220A0561100B4BE4D /* Config.swift */,
 			);
@@ -326,6 +346,7 @@
 		AD2E9A45209FFD6D00B4BE4D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A7120A1946C00B4BE4D /* Item */,
 				AD2E9A6A20A18A0200B4BE4D /* Mypage */,
 				AD2E9A6920A189E900B4BE4D /* Auth */,
 				AD2E9A6B20A18A5000B4BE4D /* TabbarController.swift */,
@@ -336,6 +357,7 @@
 		AD2E9A4A209FFFAF00B4BE4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A7920A197F200B4BE4D /* TableViewCell */,
 				AD2E9A4B209FFFCB00B4BE4D /* LoginView.swift */,
 				AD2E9A4D209FFFDD00B4BE4D /* LoginView.xib */,
 			);
@@ -357,6 +379,7 @@
 				AD2E9A5120A0061800B4BE4D /* AuthModuleFactory.swift */,
 				AD2E9A6D20A18E2900B4BE4D /* TabModuleFactory.swift */,
 				AD2E9A5320A0065200B4BE4D /* ModuleFactory.swift */,
+				AD2E9A7220A1948600B4BE4D /* ItemModuleFactory.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -373,6 +396,7 @@
 		AD2E9A6620A1886A00B4BE4D /* ServiceFlow */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A7420A194C800B4BE4D /* ItemFlow */,
 				AD2E9A6720A188BD00B4BE4D /* TabViewOutput.swift */,
 				AD2E9A6F20A18EAB00B4BE4D /* TabbarCoordinator.swift */,
 			);
@@ -392,6 +416,49 @@
 			children = (
 			);
 			path = Mypage;
+			sourceTree = "<group>";
+		};
+		AD2E9A7120A1946C00B4BE4D /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A7720A195DC00B4BE4D /* ItemListViewController.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		AD2E9A7420A194C800B4BE4D /* ItemFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A7520A194DB00B4BE4D /* ItemListViewOutput.swift */,
+				AD2E9A8620A1D14200B4BE4D /* ItemCoordinator.swift */,
+			);
+			path = ItemFlow;
+			sourceTree = "<group>";
+		};
+		AD2E9A7920A197F200B4BE4D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A7B20A1980100B4BE4D /* ItemListTableCell.swift */,
+				AD2E9A7A20A1980100B4BE4D /* ItemListTableCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		AD2E9A7E20A1B04600B4BE4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A7F20A1B06300B4BE4D /* ItemListTableCellModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD2E9A8120A1CCA300B4BE4D /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A8220A1CCFD00B4BE4D /* Translatable.swift */,
+				AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */,
+			);
+			path = Translator;
 			sourceTree = "<group>";
 		};
 		D846FC480BB7DD7E1D240E6C /* Pods */ = {
@@ -415,7 +482,6 @@
 				AD2E99B7209988D800B4BE4D /* Frameworks */,
 				AD2E99B8209988D800B4BE4D /* Resources */,
 				F7B254803B8FD9184B5657E4 /* [CP] Embed Pods Frameworks */,
-				34FCBFF26DBAF83225141627 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -487,6 +553,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2E9A7C20A1980100B4BE4D /* ItemListTableCell.xib in Resources */,
 				AD2E99C8209988DB00B4BE4D /* LaunchScreen.storyboard in Resources */,
 				AD2E99C5209988DB00B4BE4D /* Assets.xcassets in Resources */,
 				AD2E9A4E209FFFDD00B4BE4D /* LoginView.xib in Resources */,
@@ -504,21 +571,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34FCBFF26DBAF83225141627 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C59C8F9C617F16DF4F0E17B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -545,14 +597,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/FlowKit/FlowKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FlowKitManager/FlowKitManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlowKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlowKitManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
@@ -578,6 +630,7 @@
 				AD2E9A1E209FF17E00B4BE4D /* NSObject+Ex.swift in Sources */,
 				AD2E9A20209FF19D00B4BE4D /* UITableView+Ex.swift in Sources */,
 				AD2E9A15209CC7C000B4BE4D /* UserAPI.swift in Sources */,
+				AD2E9A8320A1CCFD00B4BE4D /* Translatable.swift in Sources */,
 				AD2E9A5B20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift in Sources */,
 				AD2E9A03209CB1A800B4BE4D /* JSONEncodableEncoding.swift in Sources */,
 				AD2E9A02209CB1A800B4BE4D /* CodableHelper.swift in Sources */,
@@ -586,6 +639,8 @@
 				AD2E9A5420A0065200B4BE4D /* ModuleFactory.swift in Sources */,
 				AD2E9A00209CB1A700B4BE4D /* AlamofireImplementations.swift in Sources */,
 				AD2E9A38209FF73F00B4BE4D /* Router.swift in Sources */,
+				AD2E9A7320A1948600B4BE4D /* ItemModuleFactory.swift in Sources */,
+				AD2E9A8020A1B06300B4BE4D /* ItemListTableCellModel.swift in Sources */,
 				AD2E9A7020A18EAB00B4BE4D /* TabbarCoordinator.swift in Sources */,
 				AD2E9A0A209CB8B000B4BE4D /* Item.swift in Sources */,
 				AD2E99FF209CB1A700B4BE4D /* Extensions.swift in Sources */,
@@ -606,7 +661,9 @@
 				AD2E9A3A209FF76600B4BE4D /* RouterImpl.swift in Sources */,
 				AD2E9A22209FF1BC00B4BE4D /* UICollectionView+Ex.swift in Sources */,
 				AD2E99FE209CB1A700B4BE4D /* APIs.swift in Sources */,
+				AD2E9A7820A195DC00B4BE4D /* ItemListViewController.swift in Sources */,
 				AD2E99E0209C6A3A00B4BE4D /* User.swift in Sources */,
+				AD2E9A8720A1D14200B4BE4D /* ItemCoordinator.swift in Sources */,
 				AD2E9A13209CC59900B4BE4D /* AuthAPI.swift in Sources */,
 				AD2E9A31209FF63700B4BE4D /* Coordinator.swift in Sources */,
 				AD2E9A33209FF6A600B4BE4D /* CoordinatorFinishFlowType.swift in Sources */,
@@ -617,7 +674,10 @@
 				AD2E9A2C209FF2AB00B4BE4D /* UserDefaults+Ex.swift in Sources */,
 				AD2E9A4C209FFFCB00B4BE4D /* LoginView.swift in Sources */,
 				AD2E9A01209CB1A700B4BE4D /* Models.swift in Sources */,
+				AD2E9A7D20A1980100B4BE4D /* ItemListTableCell.swift in Sources */,
+				AD2E9A7620A194DB00B4BE4D /* ItemListViewOutput.swift in Sources */,
 				AD2E9A08209CB86800B4BE4D /* Tag.swift in Sources */,
+				AD2E9A8520A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

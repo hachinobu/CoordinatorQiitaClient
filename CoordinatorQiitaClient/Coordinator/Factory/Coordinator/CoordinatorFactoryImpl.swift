@@ -22,4 +22,10 @@ final class CoordinatorFactoryImpl: CoordinatorFactory {
         return coordinator
     }
     
+    func generateItemCoordinator(navigationController: UINavigationController) -> Coordinator & CoordinatorFinishFlowType {
+        let router = RouterImpl(rootController: navigationController)
+        let coordinator = ItemCoordinator(moduleFactory: ModuleFactory(), coordinatorFactory: CoordinatorFactoryImpl(), router: router)
+        return coordinator
+    }
+    
 }

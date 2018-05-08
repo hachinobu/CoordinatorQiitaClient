@@ -23,3 +23,10 @@ extension ModuleFactory: TabModuleFactory {
         return view
     }
 }
+
+extension ModuleFactory: ItemModuleFactory {
+    func generateItemListView() -> ItemListViewOutput {
+        let view = ItemListViewController(title: "投稿一覧")
+        return view
+    }
+}

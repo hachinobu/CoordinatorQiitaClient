@@ -5,5 +5,5 @@ target 'CoordinatorQiitaClient' do
     pod 'Alamofire', '~> 4.7'
     pod 'Kingfisher'
     pod 'SVProgressHUD'
-    pod 'FlowKit'
+    pod 'FlowKitManager'
 end
