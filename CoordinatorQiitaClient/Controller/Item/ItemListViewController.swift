@@ -8,8 +8,9 @@
 
 import UIKit
 import FlowKitManager
+import Kingfisher
 
-class ItemListViewController: UIViewController, ItemListViewOutput {
+class ItemListViewController: UIViewController, ItemListViewOutput, ProgressPresentableView {
     
     var selectedItemHandler: ((String) -> Void)?
     var selectedUserHandler: ((String) -> Void)?
@@ -23,9 +24,15 @@ class ItemListViewController: UIViewController, ItemListViewOutput {
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableView.refreshControl = self.refreshControl
         return tableView
     }()
     
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: .refreshData, for: .valueChanged)
+        return refreshControl
+    }()
     private var currentPage: Int = 1
     private var models: [ItemListTableCellModel] = []
     private var director: TableDirector?
@@ -41,7 +48,6 @@ class ItemListViewController: UIViewController, ItemListViewOutput {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
         setupTableView()
         fetchItems()
     }
@@ -50,8 +56,12 @@ class ItemListViewController: UIViewController, ItemListViewOutput {
         deinitViewHandler?()
     }
     
-    private func setupViews() {
-        
+    @objc func refreshData() {
+        KingfisherManager.shared.cache.clearMemoryCache()
+        models = []
+        currentPage = 1
+        fetchItems()
+        refreshControl.endRefreshing()
     }
     
     private func setupTableView() {
@@ -81,9 +91,11 @@ class ItemListViewController: UIViewController, ItemListViewOutput {
         }
         
         director?.register(adapter: itemAdapter)
+        
     }
     
     private func fetchItems() {
+        showProgress()
         ItemAPI.fetchItemsByPageInfo(page: currentPage, perPage: 20) { [weak self] (items, error) in
             guard let items = items, let strongSelf = self else {
                 return
@@ -94,7 +106,13 @@ class ItemListViewController: UIViewController, ItemListViewOutput {
             strongSelf.director?.removeAll()
             strongSelf.director?.add(models: strongSelf.models)
             strongSelf.director?.reloadData()
+            strongSelf.hideProgress()
         }
     }
     
 }
+
+private extension Selector {
+    static let refreshData = #selector(ItemListViewController.refreshData)
+}
+

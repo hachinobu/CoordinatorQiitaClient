@@ -71,6 +71,7 @@
 		AD2E9A8320A1CCFD00B4BE4D /* Translatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8220A1CCFD00B4BE4D /* Translatable.swift */; };
 		AD2E9A8520A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */; };
 		AD2E9A8720A1D14200B4BE4D /* ItemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8620A1D14200B4BE4D /* ItemCoordinator.swift */; };
+		AD2E9A8B20A27BF500B4BE4D /* ProgressPresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8A20A27BF500B4BE4D /* ProgressPresentableView.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +155,7 @@
 		AD2E9A8220A1CCFD00B4BE4D /* Translatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translatable.swift; sourceTree = "<group>"; };
 		AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableCellModelTranslator.swift; sourceTree = "<group>"; };
 		AD2E9A8620A1D14200B4BE4D /* ItemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCoordinator.swift; sourceTree = "<group>"; };
+		AD2E9A8A20A27BF500B4BE4D /* ProgressPresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPresentableView.swift; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,6 +348,7 @@
 		AD2E9A45209FFD6D00B4BE4D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A8920A27BE200B4BE4D /* Protocol */,
 				AD2E9A7120A1946C00B4BE4D /* Item */,
 				AD2E9A6A20A18A0200B4BE4D /* Mypage */,
 				AD2E9A6920A189E900B4BE4D /* Auth */,
@@ -459,6 +462,14 @@
 				AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */,
 			);
 			path = Translator;
+			sourceTree = "<group>";
+		};
+		AD2E9A8920A27BE200B4BE4D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9A8A20A27BF500B4BE4D /* ProgressPresentableView.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		D846FC480BB7DD7E1D240E6C /* Pods */ = {
@@ -622,6 +633,7 @@
 			files = (
 				AD2E9A1B209FECF100B4BE4D /* LikeUserAPI.swift in Sources */,
 				AD2E9A6C20A18A5000B4BE4D /* TabbarController.swift in Sources */,
+				AD2E9A8B20A27BF500B4BE4D /* ProgressPresentableView.swift in Sources */,
 				AD2E9A06209CB1A800B4BE4D /* APIHelper.swift in Sources */,
 				AD2E9A0D209CBA5D00B4BE4D /* ItemAPI.swift in Sources */,
 				AD2E9A11209CC4C100B4BE4D /* AuthenticationInfo.swift in Sources */,
