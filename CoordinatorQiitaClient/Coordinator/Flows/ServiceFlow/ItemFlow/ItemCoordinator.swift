@@ -38,6 +38,10 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
             self?.runUserFlow(with: .userDetail(userId))
         }
         
+        view.deinitViewHandler = { [weak self] in
+            self?.finishFlow?()
+        }
+        
         router.setRoot(view, hideBar: false)
 
     }
