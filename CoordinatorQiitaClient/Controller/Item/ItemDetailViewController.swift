@@ -45,6 +45,8 @@ class ItemDetailViewController: UIViewController, ProgressPresentableView, ItemD
     }()
     
     private var contentsHeight: CGFloat = 0.0
+    private var headerModel: ItemHeaderTableCellModel?
+    private var contentsModel: ItemContentsTableCellModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +68,11 @@ class ItemDetailViewController: UIViewController, ProgressPresentableView, ItemD
                 self?.selectedLikeCountHandler?()
             }
             
-            ctx.cell?.updateLikeStatusHandler = { [weak self] hasLike in
+            ctx.cell?.updateLikeStatusHandler = { [weak self] in
                 guard let finishLogin = self?.selectedLikeHandler?(), finishLogin else {
                     return
                 }
-                if hasLike {
+                if ctx.model.hasLike {
                     self?.removeLikeStatus()
                 } else {
                     self?.putLikeStatus()
@@ -114,6 +116,8 @@ extension ItemDetailViewController {
             }.then { [weak self] (item, status) in
                 let itemHeaderModel = ItemHeaderTableCellModelTranslator().translate(input: (item, status))
                 let itemContentsModel = ItemContentsTableCellModelTranslator().translate(input: item)
+                self?.headerModel = itemHeaderModel
+                self?.contentsModel = itemContentsModel
                 self?.director.add(models: [itemHeaderModel, itemContentsModel])
                 self?.director.reloadData()
                 self?.hideProgress()
@@ -148,6 +152,7 @@ extension ItemDetailViewController {
         LikeUserAPI.putLikeByItemId(itemId: itemId) { [weak self] (error) in
             guard let error = error else {
                 self?.showFeedbackProgress(with: "いいねしました")
+                self?.updateLike()
                 return
             }
             self?.showErrorProgress(with: error)
@@ -159,10 +164,18 @@ extension ItemDetailViewController {
         LikeUserAPI.removeLikeByItemId(itemId: itemId) { [weak self] (error) in
             guard let error = error else {
                 self?.showFeedbackProgress(with: "いいねを削除しました")
+                self?.updateLike()
                 return
             }
             self?.showErrorProgress(with: error)
         }
+    }
+    
+    private func updateLike() {
+        headerModel?.turnLikeStatus()
+        director.removeAll()
+        director.add(models: [headerModel!, contentsModel!])
+        director.reloadData()
     }
     
 }

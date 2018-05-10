@@ -28,9 +28,10 @@ class LikeUserAPI {
         let parameters: [String: Any]? = nil
         
         let url = NSURLComponents(string: URLString)
+        let headers = ["Authorization": "Bearer \(UserDefaults.StringType.value(key: .accessToken))"]
         
         let requestBuilder: RequestBuilder<Void>.Type = SwaggerClientAPI.requestBuilderFactory.getNonDecodableBuilder()
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false, headers: headers)
     }
     
     class func removeLikeByItemIdWithRequestBuilder(itemId: String) -> RequestBuilder<Void> {
@@ -40,8 +41,9 @@ class LikeUserAPI {
         
         let url = NSURLComponents(string: URLString)
         
+        let headers = ["Authorization": "Bearer \(UserDefaults.StringType.value(key: .accessToken))"]
         let requestBuilder: RequestBuilder<Void>.Type = SwaggerClientAPI.requestBuilderFactory.getNonDecodableBuilder()
-        return requestBuilder.init(method: "DELETE", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "DELETE", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false, headers: headers)
     }
     
     class func putLikeByItemIdWithRequestBuilder(itemId: String) -> RequestBuilder<Void> {
@@ -50,9 +52,10 @@ class LikeUserAPI {
         let parameters: [String: Any]? = nil
         
         let url = NSURLComponents(string: URLString)
+        let headers = ["Authorization": "Bearer \(UserDefaults.StringType.value(key: .accessToken))"]
         
         let requestBuilder: RequestBuilder<Void>.Type = SwaggerClientAPI.requestBuilderFactory.getNonDecodableBuilder()
-        return requestBuilder.init(method: "PUT", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "PUT", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false, headers: headers)
     }
     
 }

@@ -22,4 +22,8 @@ struct ItemHeaderTableCellModel: ModelProtocol, Equatable, Hashable {
     var likeCount: String?
     var hasLike: Bool
     
+    mutating func turnLikeStatus() {
+        hasLike = !hasLike
+    }
+        
 }

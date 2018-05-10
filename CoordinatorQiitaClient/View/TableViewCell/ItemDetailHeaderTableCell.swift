@@ -18,7 +18,7 @@ class ItemDetailHeaderTableCell: UITableViewCell {
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
-    var updateLikeStatusHandler: ((Bool) -> Void)?
+    var updateLikeStatusHandler: (() -> Void)?
     var tappedUserNameButtonHandler: (() -> Void)?
     var tappedLikeCountButtonHandler: (() -> Void)?
     
@@ -32,6 +32,7 @@ class ItemDetailHeaderTableCell: UITableViewCell {
         let likeCountTap = UITapGestureRecognizer(target: self, action: .tappedLikeCountButton)
         likeCountLabel.addGestureRecognizer(likeCountTap)
         likeCountLabel.isUserInteractionEnabled = true
+        likeButton.addTarget(self, action: .tappedLikeButton, for: .touchUpInside)
     }
     
     func setupCell(with model: ItemHeaderTableCellModel) {
@@ -55,6 +56,10 @@ class ItemDetailHeaderTableCell: UITableViewCell {
                                      progressBlock: nil, completionHandler: nil)
     }
     
+    @objc func tappedLikeButton(_ sender: Any) {
+        updateLikeStatusHandler?()
+    }
+    
     @objc func tappedUserNameButton(_ sender: Any) {
         tappedUserNameButtonHandler?()
     }
@@ -66,6 +71,7 @@ class ItemDetailHeaderTableCell: UITableViewCell {
 }
 
 private extension Selector {
+    static let tappedLikeButton = #selector(ItemDetailHeaderTableCell.tappedLikeButton(_:))
     static let tappedUserNameButton = #selector(ItemDetailHeaderTableCell.tappedUserNameButton(_:))
     static let tappedLikeCountButton = #selector(ItemDetailHeaderTableCell.tappedLikeCountButton(_:))
 }
