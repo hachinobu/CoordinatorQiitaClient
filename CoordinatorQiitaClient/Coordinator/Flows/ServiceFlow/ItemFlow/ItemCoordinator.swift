@@ -35,7 +35,7 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         }
         
         view.selectedUserHandler = { [weak self] userId in
-            print(userId)
+            self?.runUserFlow(with: .userDetail(userId))
         }
         
         router.setRoot(view, hideBar: false)
@@ -46,7 +46,7 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         let view = moduleFactory.generateItemDetailView(itemId: itemId)
         
         view.selectedUserHandler = { [weak self] id in
-            print("selectUser")
+            self?.runUserFlow(with: .userDetail(id))
         }
         
         view.selectedLikeHandler = { [weak self] in
@@ -59,7 +59,7 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         }
         
         view.selectedLikeCountHandler = { [weak self] in
-            self?.runUserFlow(with: itemId)
+            self?.runUserFlow(with: .likeUserList(itemId))
         }
         
         router.push(view, animated: true, completion: nil)
@@ -74,7 +74,7 @@ extension ItemCoordinator {
         
     }
     
-    private func runUserFlow(with itemId: String) {
+    private func runUserFlow(with option: DeepLinkOption) {
         guard let navigationController = router.toPresent() as? UINavigationController else {
             return
         }
@@ -83,7 +83,7 @@ extension ItemCoordinator {
             self?.removeDependency(coordinator)
         }
         addDependency(coordinator)
-        coordinator.start(with: .likeUserList(itemId))
+        coordinator.start(with: option)
         router.push(presentable, animated: true, completion: nil)
     }
     

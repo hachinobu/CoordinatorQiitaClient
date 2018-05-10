@@ -91,6 +91,14 @@
 		AD2E9AB720A40D9F00B4BE4D /* UserModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AB620A40D9F00B4BE4D /* UserModuleFactory.swift */; };
 		AD2E9AB920A40E7000B4BE4D /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AB820A40E7000B4BE4D /* UserCoordinator.swift */; };
 		AD2E9ABB20A40F5800B4BE4D /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9ABA20A40F5800B4BE4D /* DeepLinkOption.swift */; };
+		AD2E9ABF20A41D1B00B4BE4D /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9ABE20A41D1B00B4BE4D /* FollowerListViewController.swift */; };
+		AD2E9AC120A41E2800B4BE4D /* FolloweeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AC020A41E2800B4BE4D /* FolloweeListViewController.swift */; };
+		AD2E9AC320A41F2B00B4BE4D /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AC220A41F2B00B4BE4D /* UserDetailViewController.swift */; };
+		AD2E9AC520A41F9600B4BE4D /* UserDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AC420A41F9600B4BE4D /* UserDetailViewOutput.swift */; };
+		AD2E9AC720A4209400B4BE4D /* UserHeaderTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AC620A4209400B4BE4D /* UserHeaderTableCellModel.swift */; };
+		AD2E9AC920A4216D00B4BE4D /* UserHeaderTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AC820A4216D00B4BE4D /* UserHeaderTableCellModelTranslator.swift */; };
+		AD2E9ACC20A4271800B4BE4D /* UserDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2E9ACA20A4271800B4BE4D /* UserDetailTableCell.xib */; };
+		AD2E9ACD20A4271800B4BE4D /* UserDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9ACB20A4271800B4BE4D /* UserDetailTableCell.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -194,6 +202,14 @@
 		AD2E9AB620A40D9F00B4BE4D /* UserModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModuleFactory.swift; sourceTree = "<group>"; };
 		AD2E9AB820A40E7000B4BE4D /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 		AD2E9ABA20A40F5800B4BE4D /* DeepLinkOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
+		AD2E9ABE20A41D1B00B4BE4D /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
+		AD2E9AC020A41E2800B4BE4D /* FolloweeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeListViewController.swift; sourceTree = "<group>"; };
+		AD2E9AC220A41F2B00B4BE4D /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		AD2E9AC420A41F9600B4BE4D /* UserDetailViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewOutput.swift; sourceTree = "<group>"; };
+		AD2E9AC620A4209400B4BE4D /* UserHeaderTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderTableCellModel.swift; sourceTree = "<group>"; };
+		AD2E9AC820A4216D00B4BE4D /* UserHeaderTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderTableCellModelTranslator.swift; sourceTree = "<group>"; };
+		AD2E9ACA20A4271800B4BE4D /* UserDetailTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailTableCell.xib; sourceTree = "<group>"; };
+		AD2E9ACB20A4271800B4BE4D /* UserDetailTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailTableCell.swift; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -485,6 +501,8 @@
 		AD2E9A7920A197F200B4BE4D /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9ACB20A4271800B4BE4D /* UserDetailTableCell.swift */,
+				AD2E9ACA20A4271800B4BE4D /* UserDetailTableCell.xib */,
 				AD2E9AB320A40A1F00B4BE4D /* UserListTableCell.swift */,
 				AD2E9AB220A40A1F00B4BE4D /* UserListTableCell.xib */,
 				AD2E9A9420A287EE00B4BE4D /* ItemDetailHeaderTableCell.swift */,
@@ -504,6 +522,7 @@
 				AD2E9A9C20A2C0D400B4BE4D /* ItemHeaderTableCellModel.swift */,
 				AD2E9A9E20A2C5A000B4BE4D /* ItemContentsTableCellModel.swift */,
 				AD2E9AAE20A408B200B4BE4D /* UserListTableCellModel.swift */,
+				AD2E9AC620A4209400B4BE4D /* UserHeaderTableCellModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -516,6 +535,7 @@
 				AD2E9AA020A2CFC000B4BE4D /* ItemHeaderTableCellModelTranslator.swift */,
 				AD2E9AA220A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift */,
 				AD2E9AB020A4091300B4BE4D /* UserListTableCellModelTranslator.swift */,
+				AD2E9AC820A4216D00B4BE4D /* UserHeaderTableCellModelTranslator.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -533,6 +553,7 @@
 			children = (
 				AD2E9AA920A4063000B4BE4D /* UserListViewOutput.swift */,
 				AD2E9AB820A40E7000B4BE4D /* UserCoordinator.swift */,
+				AD2E9AC420A41F9600B4BE4D /* UserDetailViewOutput.swift */,
 			);
 			path = UserFlow;
 			sourceTree = "<group>";
@@ -541,6 +562,9 @@
 			isa = PBXGroup;
 			children = (
 				AD2E9AAC20A4069000B4BE4D /* LikeUserListViewController.swift */,
+				AD2E9ABE20A41D1B00B4BE4D /* FollowerListViewController.swift */,
+				AD2E9AC020A41E2800B4BE4D /* FolloweeListViewController.swift */,
+				AD2E9AC220A41F2B00B4BE4D /* UserDetailViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -642,6 +666,7 @@
 				AD2E9A9720A287EE00B4BE4D /* ItemDetailHeaderTableCell.xib in Resources */,
 				AD2E99C8209988DB00B4BE4D /* LaunchScreen.storyboard in Resources */,
 				AD2E99C5209988DB00B4BE4D /* Assets.xcassets in Resources */,
+				AD2E9ACC20A4271800B4BE4D /* UserDetailTableCell.xib in Resources */,
 				AD2E9A4E209FFFDD00B4BE4D /* LoginView.xib in Resources */,
 				AD2E9A9A20A28D6500B4BE4D /* ItemDetailWebTableCell.xib in Resources */,
 				AD2E99C3209988D800B4BE4D /* Main.storyboard in Resources */,
@@ -709,8 +734,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2E9AC920A4216D00B4BE4D /* UserHeaderTableCellModelTranslator.swift in Sources */,
 				AD2E9A1B209FECF100B4BE4D /* LikeUserAPI.swift in Sources */,
 				AD2E9A6C20A18A5000B4BE4D /* TabbarController.swift in Sources */,
+				AD2E9AC320A41F2B00B4BE4D /* UserDetailViewController.swift in Sources */,
 				AD2E9A8B20A27BF500B4BE4D /* ProgressPresentableView.swift in Sources */,
 				AD2E9A06209CB1A800B4BE4D /* APIHelper.swift in Sources */,
 				AD2E9A0D209CBA5D00B4BE4D /* ItemAPI.swift in Sources */,
@@ -751,6 +778,7 @@
 				AD2E9A9F20A2C5A000B4BE4D /* ItemContentsTableCellModel.swift in Sources */,
 				AD2E9AA120A2CFC100B4BE4D /* ItemHeaderTableCellModelTranslator.swift in Sources */,
 				AD2E99BE209988D800B4BE4D /* AppDelegate.swift in Sources */,
+				AD2E9AC120A41E2800B4BE4D /* FolloweeListViewController.swift in Sources */,
 				AD2E9A05209CB1A800B4BE4D /* JSONEncodingHelper.swift in Sources */,
 				AD2E9A04209CB1A800B4BE4D /* Configuration.swift in Sources */,
 				AD2E9A26209FF22600B4BE4D /* StoryboardInstantiatable.swift in Sources */,
@@ -764,6 +792,7 @@
 				AD2E9A7820A195DC00B4BE4D /* ItemListViewController.swift in Sources */,
 				AD2E99E0209C6A3A00B4BE4D /* User.swift in Sources */,
 				AD2E9A8720A1D14200B4BE4D /* ItemCoordinator.swift in Sources */,
+				AD2E9ACD20A4271800B4BE4D /* UserDetailTableCell.swift in Sources */,
 				AD2E9A13209CC59900B4BE4D /* AuthAPI.swift in Sources */,
 				AD2E9AB520A40A2000B4BE4D /* UserListTableCell.swift in Sources */,
 				AD2E9AA320A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift in Sources */,
@@ -772,15 +801,18 @@
 				AD2E9A33209FF6A600B4BE4D /* CoordinatorFinishFlowType.swift in Sources */,
 				AD2E9A0F209CC11000B4BE4D /* LikeUser.swift in Sources */,
 				AD2E9A2F209FF62500B4BE4D /* BaseCoordinator.swift in Sources */,
+				AD2E9AC520A41F9600B4BE4D /* UserDetailViewOutput.swift in Sources */,
 				AD2E9A8D20A284B200B4BE4D /* ItemDetailViewController.swift in Sources */,
 				AD2E9A24209FF1FB00B4BE4D /* NibInstantiatable.swift in Sources */,
 				AD2E9A9D20A2C0D400B4BE4D /* ItemHeaderTableCellModel.swift in Sources */,
 				AD2E9A6320A0561100B4BE4D /* Config.swift in Sources */,
 				AD2E9A2C209FF2AB00B4BE4D /* UserDefaults+Ex.swift in Sources */,
+				AD2E9AC720A4209400B4BE4D /* UserHeaderTableCellModel.swift in Sources */,
 				AD2E9A9B20A28D6500B4BE4D /* ItemDetailWebTableCell.swift in Sources */,
 				AD2E9A4C209FFFCB00B4BE4D /* LoginView.swift in Sources */,
 				AD2E9A01209CB1A700B4BE4D /* Models.swift in Sources */,
 				AD2E9A7D20A1980100B4BE4D /* ItemListTableCell.swift in Sources */,
+				AD2E9ABF20A41D1B00B4BE4D /* FollowerListViewController.swift in Sources */,
 				AD2E9A7620A194DB00B4BE4D /* ItemListViewOutput.swift in Sources */,
 				AD2E9A08209CB86800B4BE4D /* Tag.swift in Sources */,
 				AD2E9A8520A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift in Sources */,

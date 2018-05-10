@@ -1,5 +1,5 @@
 //
-//  LikeUserListViewController.swift
+//  FollowerListViewController.swift
 //  CoordinatorQiitaClient
 //
 //  Created by Takahiro Nishinobu on 2018/05/10.
@@ -9,14 +9,14 @@
 import UIKit
 import FlowKitManager
 
-class LikeUserListViewController: UIViewController, ProgressPresentableView, UserListViewOutput {
-    
+class FollowerListViewController: UIViewController, ProgressPresentableView, UserListViewOutput {
+
     var selectedUserHandler: ((String) -> Void)?
     var deinitHandler: (() -> Void)?
-    private let itemId: String
+    private let userId: String
     
-    init(title: String, itemId: String) {
-        self.itemId = itemId
+    init(title: String, userId: String) {
+        self.userId = userId
         super.init(nibName: nil, bundle: nil)
         self.title = title
     }
@@ -44,7 +44,7 @@ class LikeUserListViewController: UIViewController, ProgressPresentableView, Use
     private var currentPage: Int = 1
     private var models: [UserListTableCellModel] = []
     private var moreLoadData: Bool = true
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -85,17 +85,16 @@ class LikeUserListViewController: UIViewController, ProgressPresentableView, Use
     
     private func fetchUsers() {
         showProgress()
-        LikeUserAPI.fetchLikeUsersByItemId(itemId: itemId, page: currentPage, perPage: 20) { [weak self] (users, error) in
-            guard let likeUsers = users, let strongSelf = self else {
+        UserAPI.fetchFollowersByUserId(id: userId, page: currentPage, perPage: 20) { [weak self] (users, error) in
+            guard let users = users, let strongSelf = self else {
                 return
             }
-            guard likeUsers.count > 0 else {
+            guard users.count > 0 else {
                 strongSelf.hideProgress()
                 strongSelf.moreLoadData = false
                 return
             }
             strongSelf.currentPage = strongSelf.currentPage + 1
-            let users = likeUsers.compactMap { $0.user }
             let newModels = users.translate(translatable: UserListTableCellModelTranslator())
             strongSelf.models = strongSelf.models + newModels
             strongSelf.director.removeAll()
@@ -103,6 +102,7 @@ class LikeUserListViewController: UIViewController, ProgressPresentableView, Use
             strongSelf.director.reloadData()
             strongSelf.hideProgress()
         }
+        
     }
 
 }

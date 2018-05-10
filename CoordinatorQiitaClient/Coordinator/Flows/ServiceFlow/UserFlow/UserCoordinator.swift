@@ -34,6 +34,8 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         
         if let itemId = option.fetchLikeUserListItemId() {
             showLikeUserList(with: itemId)
+        } else if let userId = option.fetchUserId() {
+            showUserDetail(with: userId)
         }
     }
     
@@ -45,10 +47,37 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         }
         
         view.selectedUserHandler = { [weak self] userId in
-            
+            self?.showUserDetail(with: userId)
         }
         
         router.push(view, animated: true, completion: nil)
+    }
+    
+    private func showUserDetail(with userId: String) {
+        let view = moduleFactory.generateUserDetailView(with: userId)
+        
+        view.selectedFollowTagHandler = { [weak self] in
+            print("selectedFollowTagHandler")
+        }
+        
+        view.selectedFolloweeHandler = { [weak self] in
+            print("selectedFolloweeHandler")
+        }
+        
+        view.selectedFollowerHandler = { [weak self] in
+            print("selectedFollowerHandler")
+        }
+        
+        view.selectedItemHandler = { [weak self] itemId in
+            print("selectedFollowerHandler")
+        }
+        
+        view.deinitHandler = { [weak self] in
+            self?.finishFlow?()
+        }
+        
+        router.push(view, animated: true, completion: nil)
+        
     }
     
 }

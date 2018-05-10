@@ -10,4 +10,5 @@ import Foundation
 
 protocol UserModuleFactory {
     func generateLikeUserListView(with itemId: String) -> UserListViewOutput
+    func generateUserDetailView(with userId: String) -> UserDetailViewOutput
 }

@@ -46,4 +46,10 @@ extension ModuleFactory: UserModuleFactory {
         let view = LikeUserListViewController(title: "いいねした人", itemId: itemId)
         return view
     }
+    
+    func generateUserDetailView(with userId: String) -> UserDetailViewOutput {
+        let view = UserDetailViewController(title: userId, userId: userId)
+        return view
+    }
+    
 }

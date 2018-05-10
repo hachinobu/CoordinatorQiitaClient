@@ -10,6 +10,7 @@ import Foundation
 
 enum DeepLinkOption {
     case likeUserList(String)
+    case userDetail(String)
     
     func fetchLikeUserListItemId() -> String? {
         switch self {
@@ -19,4 +20,14 @@ enum DeepLinkOption {
             return nil
         }
     }
+    
+    func fetchUserId() -> String? {
+        switch self {
+        case .userDetail(let id):
+            return id
+        default:
+            return nil
+        }
+    }
+    
 }
