@@ -43,8 +43,13 @@ class TabbarController: UITabBarController, TabViewOutput {
     
     private var currentIndex: Int = SelectTab.item.rawValue
     
-    init(tab selected: SelectTab) {
+    init(tab selected: SelectTab, selectedItemTabHandler: ((UINavigationController) -> Void)?,
+         selectedTagTabHandler: ((UINavigationController) -> Void)?,
+         selectedMypageTabHandler: ((UINavigationController) -> Void)?) {
         currentIndex = selected.rawValue
+        self.selectedItemTabHandler = selectedItemTabHandler
+        self.selectedTagTabHandler = selectedTagTabHandler
+        self.selectedMypageTabHandler = selectedMypageTabHandler
         super.init(nibName: nil, bundle: nil)
     }
     

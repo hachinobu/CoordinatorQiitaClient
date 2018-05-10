@@ -10,6 +10,8 @@ import UIKit
 
 final class TabbarCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
     
+    typealias TabHandler = ((UINavigationController) -> Void)
+    
     var finishFlow: (() -> Void)?
     
     private let moduleFactory: TabModuleFactory
@@ -29,19 +31,18 @@ final class TabbarCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
     }
     
     private func showTabView() {
-        let view = moduleFactory.generateTabView(with: currentTab)
         
-        view.selectedItemTabHandler = { [weak self] navigationController in
+        let itemTabHandler: TabHandler = { [weak self] navigationController in
             self?.currentTab = .item
             self?.runItemTabFlow(with: navigationController)
         }
         
-        view.selectedTagTabHandler = { [weak self] navigationController in
+        let tagTabHandler: TabHandler = { [weak self] navigationController in
             self?.currentTab = .tag
             self?.runTagTabFlow(with: navigationController)
         }
         
-        view.selectedMypageTabHandler = { [weak self] navigationController in
+        let mypageTabHandler: TabHandler = { [weak self] navigationController in
             self?.currentTab = .mypage
             if UserDefaults.StringType.value(key: .accessToken).isEmpty {
                 self?.runAuthFlow(with: navigationController)
@@ -50,7 +51,12 @@ final class TabbarCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
             }
         }
         
-        router.setRoot(view, hideBar: true)
+        let view = moduleFactory.generateTabView(with: currentTab,
+                                                 itemTabHandler: itemTabHandler,
+                                                 tagTabHandler: tagTabHandler,
+                                                 mypageTabHandler: mypageTabHandler)
+        
+        router.setRoot(view, hideBar: true)        
     }
     
 }

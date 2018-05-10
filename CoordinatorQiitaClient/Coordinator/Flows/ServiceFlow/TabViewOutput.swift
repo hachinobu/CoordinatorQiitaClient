@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TabViewOutput: BaseView {
-    var selectedItemTabHandler: ((UINavigationController) -> Void)? { get set }
-    var selectedTagTabHandler: ((UINavigationController) -> Void)? { get set }
-    var selectedMypageTabHandler: ((UINavigationController) -> Void)? { get set }
+    var selectedItemTabHandler: ((UINavigationController) -> Void)? { get }
+    var selectedTagTabHandler: ((UINavigationController) -> Void)? { get }
+    var selectedMypageTabHandler: ((UINavigationController) -> Void)? { get }
 }

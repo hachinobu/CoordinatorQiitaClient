@@ -18,10 +18,15 @@ extension ModuleFactory: AuthModuleFactory {
 }
 
 extension ModuleFactory: TabModuleFactory {
-    func generateTabView(with selected: TabbarController.SelectTab) -> TabViewOutput {
-        let view = TabbarController(tab: selected)
+    
+    func generateTabView(with selected: TabbarController.SelectTab,
+                         itemTabHandler: @escaping ((UINavigationController) -> Void),
+                         tagTabHandler: @escaping ((UINavigationController) -> Void),
+                         mypageTabHandler: @escaping ((UINavigationController) -> Void)) -> TabViewOutput {
+        let view = TabbarController(tab: selected, selectedItemTabHandler: itemTabHandler, selectedTagTabHandler: tagTabHandler, selectedMypageTabHandler: mypageTabHandler)
         return view
     }
+    
 }
 
 extension ModuleFactory: ItemModuleFactory {
