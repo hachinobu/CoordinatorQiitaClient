@@ -9,12 +9,13 @@
 import UIKit
 
 class BaseCoordinator: Coordinator, DependencyCoordinator {
-    
     var childCoordinators: [Coordinator] = []
     
     func start() {
         fatalError("Required Override method")
     }
+    
+    func start(with option: DeepLinkOption?) {}
     
     func addDependency(_ coordinator: Coordinator) {
         if childCoordinators.contains(where: { $0 === coordinator }) {

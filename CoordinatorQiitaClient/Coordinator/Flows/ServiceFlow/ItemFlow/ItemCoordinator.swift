@@ -6,7 +6,7 @@
 //  Copyright © 2018年 hachinobu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
     
@@ -51,6 +51,7 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         
         view.selectedLikeHandler = { [weak self] in
             if UserDefaults.StringType.value(key: .accessToken).isEmpty {
+                self?.runLoginFlow()
                 return false
             } else {
                 return true
@@ -58,7 +59,7 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         }
         
         view.selectedLikeCountHandler = { [weak self] in
-            print("selectCount")
+            self?.runUserFlow(with: itemId)
         }
         
         router.push(view, animated: true, completion: nil)
@@ -66,3 +67,25 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
     }
     
 }
+
+extension ItemCoordinator {
+    
+    private func runLoginFlow() {
+        
+    }
+    
+    private func runUserFlow(with itemId: String) {
+        guard let navigationController = router.toPresent() as? UINavigationController else {
+            return
+        }
+        let (presentable, coordinator) = coordinatorFactory.generateUserCoordinatorBox(navigationController: navigationController)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start(with: .likeUserList(itemId))
+        router.push(presentable, animated: true, completion: nil)
+    }
+    
+}
+

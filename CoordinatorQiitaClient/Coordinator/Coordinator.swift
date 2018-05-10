@@ -10,6 +10,7 @@ import Foundation
 
 protocol Coordinator: class {
     func start()
+    func start(with option: DeepLinkOption?)
 }
 
 protocol DependencyCoordinator: class {
