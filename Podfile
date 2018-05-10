@@ -6,4 +6,5 @@ target 'CoordinatorQiitaClient' do
     pod 'Kingfisher'
     pod 'SVProgressHUD'
     pod 'FlowKitManager'
+    pod 'HydraAsync'
 end

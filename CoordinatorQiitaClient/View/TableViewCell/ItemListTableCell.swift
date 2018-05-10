@@ -8,7 +8,6 @@
 
 import UIKit
 import Kingfisher
-import FlowKitManager
 
 class ItemListTableCell: UITableViewCell {
 

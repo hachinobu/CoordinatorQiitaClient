@@ -31,7 +31,7 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         let view = moduleFactory.generateItemListView()
         
         view.selectedItemHandler = { [weak self] itemId in
-            print(itemId)
+            self?.showItemDetail(with: itemId)
         }
         
         view.selectedUserHandler = { [weak self] userId in
@@ -40,6 +40,29 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         
         router.setRoot(view, hideBar: false)
 
+    }
+    
+    private func showItemDetail(with itemId: String) {
+        let view = moduleFactory.generateItemDetailView(itemId: itemId)
+        
+        view.selectedUserHandler = { [weak self] id in
+            print("selectUser")
+        }
+        
+        view.selectedLikeHandler = { [weak self] in
+            if UserDefaults.StringType.value(key: .accessToken).isEmpty {
+                return false
+            } else {
+                return true
+            }
+        }
+        
+        view.selectedLikeCountHandler = { [weak self] in
+            print("selectCount")
+        }
+        
+        router.push(view, animated: true, completion: nil)
+        
     }
     
 }

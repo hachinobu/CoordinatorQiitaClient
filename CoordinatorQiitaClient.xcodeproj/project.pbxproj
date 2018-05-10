@@ -72,6 +72,16 @@
 		AD2E9A8520A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */; };
 		AD2E9A8720A1D14200B4BE4D /* ItemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8620A1D14200B4BE4D /* ItemCoordinator.swift */; };
 		AD2E9A8B20A27BF500B4BE4D /* ProgressPresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8A20A27BF500B4BE4D /* ProgressPresentableView.swift */; };
+		AD2E9A8D20A284B200B4BE4D /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A8C20A284B200B4BE4D /* ItemDetailViewController.swift */; };
+		AD2E9A9620A287EE00B4BE4D /* ItemDetailHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A9420A287EE00B4BE4D /* ItemDetailHeaderTableCell.swift */; };
+		AD2E9A9720A287EE00B4BE4D /* ItemDetailHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2E9A9520A287EE00B4BE4D /* ItemDetailHeaderTableCell.xib */; };
+		AD2E9A9A20A28D6500B4BE4D /* ItemDetailWebTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2E9A9820A28D6400B4BE4D /* ItemDetailWebTableCell.xib */; };
+		AD2E9A9B20A28D6500B4BE4D /* ItemDetailWebTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A9920A28D6400B4BE4D /* ItemDetailWebTableCell.swift */; };
+		AD2E9A9D20A2C0D400B4BE4D /* ItemHeaderTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A9C20A2C0D400B4BE4D /* ItemHeaderTableCellModel.swift */; };
+		AD2E9A9F20A2C5A000B4BE4D /* ItemContentsTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9A9E20A2C5A000B4BE4D /* ItemContentsTableCellModel.swift */; };
+		AD2E9AA120A2CFC100B4BE4D /* ItemHeaderTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AA020A2CFC000B4BE4D /* ItemHeaderTableCellModelTranslator.swift */; };
+		AD2E9AA320A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AA220A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift */; };
+		AD2E9AA520A3C99200B4BE4D /* ItemDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AA420A3C99200B4BE4D /* ItemDetailViewOutput.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +166,16 @@
 		AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableCellModelTranslator.swift; sourceTree = "<group>"; };
 		AD2E9A8620A1D14200B4BE4D /* ItemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCoordinator.swift; sourceTree = "<group>"; };
 		AD2E9A8A20A27BF500B4BE4D /* ProgressPresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPresentableView.swift; sourceTree = "<group>"; };
+		AD2E9A8C20A284B200B4BE4D /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		AD2E9A9420A287EE00B4BE4D /* ItemDetailHeaderTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailHeaderTableCell.swift; sourceTree = "<group>"; };
+		AD2E9A9520A287EE00B4BE4D /* ItemDetailHeaderTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailHeaderTableCell.xib; sourceTree = "<group>"; };
+		AD2E9A9820A28D6400B4BE4D /* ItemDetailWebTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailWebTableCell.xib; sourceTree = "<group>"; };
+		AD2E9A9920A28D6400B4BE4D /* ItemDetailWebTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailWebTableCell.swift; sourceTree = "<group>"; };
+		AD2E9A9C20A2C0D400B4BE4D /* ItemHeaderTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHeaderTableCellModel.swift; sourceTree = "<group>"; };
+		AD2E9A9E20A2C5A000B4BE4D /* ItemContentsTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemContentsTableCellModel.swift; sourceTree = "<group>"; };
+		AD2E9AA020A2CFC000B4BE4D /* ItemHeaderTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHeaderTableCellModelTranslator.swift; sourceTree = "<group>"; };
+		AD2E9AA220A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemContentsTableCellModelTranslator.swift; sourceTree = "<group>"; };
+		AD2E9AA420A3C99200B4BE4D /* ItemDetailViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewOutput.swift; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -425,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				AD2E9A7720A195DC00B4BE4D /* ItemListViewController.swift */,
+				AD2E9A8C20A284B200B4BE4D /* ItemDetailViewController.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -433,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				AD2E9A7520A194DB00B4BE4D /* ItemListViewOutput.swift */,
+				AD2E9AA420A3C99200B4BE4D /* ItemDetailViewOutput.swift */,
 				AD2E9A8620A1D14200B4BE4D /* ItemCoordinator.swift */,
 			);
 			path = ItemFlow;
@@ -441,6 +463,10 @@
 		AD2E9A7920A197F200B4BE4D /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9A9420A287EE00B4BE4D /* ItemDetailHeaderTableCell.swift */,
+				AD2E9A9520A287EE00B4BE4D /* ItemDetailHeaderTableCell.xib */,
+				AD2E9A9920A28D6400B4BE4D /* ItemDetailWebTableCell.swift */,
+				AD2E9A9820A28D6400B4BE4D /* ItemDetailWebTableCell.xib */,
 				AD2E9A7B20A1980100B4BE4D /* ItemListTableCell.swift */,
 				AD2E9A7A20A1980100B4BE4D /* ItemListTableCell.xib */,
 			);
@@ -451,6 +477,8 @@
 			isa = PBXGroup;
 			children = (
 				AD2E9A7F20A1B06300B4BE4D /* ItemListTableCellModel.swift */,
+				AD2E9A9C20A2C0D400B4BE4D /* ItemHeaderTableCellModel.swift */,
+				AD2E9A9E20A2C5A000B4BE4D /* ItemContentsTableCellModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -460,6 +488,8 @@
 			children = (
 				AD2E9A8220A1CCFD00B4BE4D /* Translatable.swift */,
 				AD2E9A8420A1CD2D00B4BE4D /* ItemListTableCellModelTranslator.swift */,
+				AD2E9AA020A2CFC000B4BE4D /* ItemHeaderTableCellModelTranslator.swift */,
+				AD2E9AA220A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -565,9 +595,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD2E9A7C20A1980100B4BE4D /* ItemListTableCell.xib in Resources */,
+				AD2E9A9720A287EE00B4BE4D /* ItemDetailHeaderTableCell.xib in Resources */,
 				AD2E99C8209988DB00B4BE4D /* LaunchScreen.storyboard in Resources */,
 				AD2E99C5209988DB00B4BE4D /* Assets.xcassets in Resources */,
 				AD2E9A4E209FFFDD00B4BE4D /* LoginView.xib in Resources */,
+				AD2E9A9A20A28D6500B4BE4D /* ItemDetailWebTableCell.xib in Resources */,
 				AD2E99C3209988D800B4BE4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +641,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlowKitManager/FlowKitManager.framework",
+				"${BUILT_PRODUCTS_DIR}/HydraAsync/Hydra.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
@@ -616,6 +649,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlowKitManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hydra.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
@@ -647,11 +681,13 @@
 				AD2E9A03209CB1A800B4BE4D /* JSONEncodableEncoding.swift in Sources */,
 				AD2E9A02209CB1A800B4BE4D /* CodableHelper.swift in Sources */,
 				AD2E9A6E20A18E2900B4BE4D /* TabModuleFactory.swift in Sources */,
+				AD2E9A9620A287EE00B4BE4D /* ItemDetailHeaderTableCell.swift in Sources */,
 				AD2E9A5220A0061800B4BE4D /* AuthModuleFactory.swift in Sources */,
 				AD2E9A5420A0065200B4BE4D /* ModuleFactory.swift in Sources */,
 				AD2E9A00209CB1A700B4BE4D /* AlamofireImplementations.swift in Sources */,
 				AD2E9A38209FF73F00B4BE4D /* Router.swift in Sources */,
 				AD2E9A7320A1948600B4BE4D /* ItemModuleFactory.swift in Sources */,
+				AD2E9AA520A3C99200B4BE4D /* ItemDetailViewOutput.swift in Sources */,
 				AD2E9A8020A1B06300B4BE4D /* ItemListTableCellModel.swift in Sources */,
 				AD2E9A7020A18EAB00B4BE4D /* TabbarCoordinator.swift in Sources */,
 				AD2E9A0A209CB8B000B4BE4D /* Item.swift in Sources */,
@@ -664,6 +700,8 @@
 				AD2E99C0209988D800B4BE4D /* ViewController.swift in Sources */,
 				AD2E9A5F20A0171A00B4BE4D /* AuthViewController.swift in Sources */,
 				AD2E9A6820A188BD00B4BE4D /* TabViewOutput.swift in Sources */,
+				AD2E9A9F20A2C5A000B4BE4D /* ItemContentsTableCellModel.swift in Sources */,
+				AD2E9AA120A2CFC100B4BE4D /* ItemHeaderTableCellModelTranslator.swift in Sources */,
 				AD2E99BE209988D800B4BE4D /* AppDelegate.swift in Sources */,
 				AD2E9A05209CB1A800B4BE4D /* JSONEncodingHelper.swift in Sources */,
 				AD2E9A04209CB1A800B4BE4D /* Configuration.swift in Sources */,
@@ -677,13 +715,17 @@
 				AD2E99E0209C6A3A00B4BE4D /* User.swift in Sources */,
 				AD2E9A8720A1D14200B4BE4D /* ItemCoordinator.swift in Sources */,
 				AD2E9A13209CC59900B4BE4D /* AuthAPI.swift in Sources */,
+				AD2E9AA320A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift in Sources */,
 				AD2E9A31209FF63700B4BE4D /* Coordinator.swift in Sources */,
 				AD2E9A33209FF6A600B4BE4D /* CoordinatorFinishFlowType.swift in Sources */,
 				AD2E9A0F209CC11000B4BE4D /* LikeUser.swift in Sources */,
 				AD2E9A2F209FF62500B4BE4D /* BaseCoordinator.swift in Sources */,
+				AD2E9A8D20A284B200B4BE4D /* ItemDetailViewController.swift in Sources */,
 				AD2E9A24209FF1FB00B4BE4D /* NibInstantiatable.swift in Sources */,
+				AD2E9A9D20A2C0D400B4BE4D /* ItemHeaderTableCellModel.swift in Sources */,
 				AD2E9A6320A0561100B4BE4D /* Config.swift in Sources */,
 				AD2E9A2C209FF2AB00B4BE4D /* UserDefaults+Ex.swift in Sources */,
+				AD2E9A9B20A28D6500B4BE4D /* ItemDetailWebTableCell.swift in Sources */,
 				AD2E9A4C209FFFCB00B4BE4D /* LoginView.swift in Sources */,
 				AD2E9A01209CB1A700B4BE4D /* Models.swift in Sources */,
 				AD2E9A7D20A1980100B4BE4D /* ItemListTableCell.swift in Sources */,

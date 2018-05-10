@@ -25,4 +25,8 @@ extension ProgressPresentableView where Self: UIViewController {
         SVProgressHUD.showError(withStatus: error.localizedDescription)
     }
     
+    func showFeedbackProgress(with message: String) {
+        SVProgressHUD.showSuccess(withStatus: message)
+    }
+    
 }

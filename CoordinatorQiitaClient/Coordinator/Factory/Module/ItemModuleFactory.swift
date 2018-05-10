@@ -10,4 +10,5 @@ import Foundation
 
 protocol ItemModuleFactory {
     func generateItemListView() -> ItemListViewOutput
+    func generateItemDetailView(itemId: String) -> ItemDetailViewOutput
 }

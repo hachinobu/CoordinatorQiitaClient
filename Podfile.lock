@@ -1,12 +1,14 @@
 PODS:
   - Alamofire (4.7.0)
   - FlowKitManager (0.5.5)
+  - HydraAsync (1.2.1)
   - Kingfisher (4.6.3)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - FlowKitManager
+  - HydraAsync
   - Kingfisher
   - SVProgressHUD
 
@@ -14,15 +16,17 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - FlowKitManager
+    - HydraAsync
     - Kingfisher
     - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   FlowKitManager: 97323bd71e571c6f1b716b00aa4c9054a6ecfa05
+  HydraAsync: 8f2ab62d57e140b4ca587ae0f66e1eb04e8e6965
   Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: b99ad4a2028e700b5deedb503d8cb68b136b1fd5
+PODFILE CHECKSUM: d67e9b2ae404052c2f6daae8963db306da48eefa
 
 COCOAPODS: 1.5.0

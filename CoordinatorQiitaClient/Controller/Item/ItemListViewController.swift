@@ -33,9 +33,14 @@ class ItemListViewController: UIViewController, ItemListViewOutput, ProgressPres
         refreshControl.addTarget(self, action: .refreshData, for: .valueChanged)
         return refreshControl
     }()
+    
+    private lazy var director: TableDirector = {
+        return TableDirector(tableView)
+    }()
+    
     private var currentPage: Int = 1
     private var models: [ItemListTableCellModel] = []
-    private var director: TableDirector?
+    
 
     init(title: String) {
         super.init(nibName: nil, bundle: nil)
@@ -65,7 +70,6 @@ class ItemListViewController: UIViewController, ItemListViewOutput, ProgressPres
     }
     
     private func setupTableView() {
-        director = TableDirector(tableView)
         let itemAdapter = TableAdapter<ItemListTableCellModel, ItemListTableCell>()
         
         itemAdapter.on.dequeue = { ctx in
@@ -90,7 +94,7 @@ class ItemListViewController: UIViewController, ItemListViewOutput, ProgressPres
             return .deselectAnimated
         }
         
-        director?.register(adapter: itemAdapter)
+        director.register(adapter: itemAdapter)
         
     }
     
@@ -103,9 +107,9 @@ class ItemListViewController: UIViewController, ItemListViewOutput, ProgressPres
             strongSelf.currentPage = strongSelf.currentPage + 1
             let newModels = items.translate(translatable: ItemListTableCellModelTranslator())
             strongSelf.models = strongSelf.models + newModels
-            strongSelf.director?.removeAll()
-            strongSelf.director?.add(models: strongSelf.models)
-            strongSelf.director?.reloadData()
+            strongSelf.director.removeAll()
+            strongSelf.director.add(models: strongSelf.models)
+            strongSelf.director.reloadData()
             strongSelf.hideProgress()
         }
     }

@@ -29,4 +29,9 @@ extension ModuleFactory: ItemModuleFactory {
         let view = ItemListViewController(title: "投稿一覧")
         return view
     }
+    
+    func generateItemDetailView(itemId: String) -> ItemDetailViewOutput {
+        let view = ItemDetailViewController(title: "詳細", itemId: itemId)
+        return view
+    }
 }
