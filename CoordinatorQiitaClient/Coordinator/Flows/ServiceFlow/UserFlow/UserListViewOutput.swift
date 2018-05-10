@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol LikeUserListViewOutput: BaseView {
+protocol UserListViewOutput: BaseView {
     var selectedUserHandler: ((String) -> Void)? { get set }
     var deinitHandler: (() -> Void)? { get set }
 }

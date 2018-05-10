@@ -9,7 +9,7 @@
 import UIKit
 import FlowKitManager
 
-class LikeUserListViewController: UIViewController, ProgressPresentableView, LikeUserListViewOutput {
+class LikeUserListViewController: UIViewController, ProgressPresentableView, UserListViewOutput {
     
     var selectedUserHandler: ((String) -> Void)?
     var deinitHandler: (() -> Void)?

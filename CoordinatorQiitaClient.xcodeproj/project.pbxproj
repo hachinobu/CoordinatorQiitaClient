@@ -82,7 +82,7 @@
 		AD2E9AA120A2CFC100B4BE4D /* ItemHeaderTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AA020A2CFC000B4BE4D /* ItemHeaderTableCellModelTranslator.swift */; };
 		AD2E9AA320A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AA220A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift */; };
 		AD2E9AA520A3C99200B4BE4D /* ItemDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AA420A3C99200B4BE4D /* ItemDetailViewOutput.swift */; };
-		AD2E9AAA20A4063000B4BE4D /* LikeUserListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AA920A4063000B4BE4D /* LikeUserListViewOutput.swift */; };
+		AD2E9AAA20A4063000B4BE4D /* UserListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AA920A4063000B4BE4D /* UserListViewOutput.swift */; };
 		AD2E9AAD20A4069000B4BE4D /* LikeUserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AAC20A4069000B4BE4D /* LikeUserListViewController.swift */; };
 		AD2E9AAF20A408B200B4BE4D /* UserListTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AAE20A408B200B4BE4D /* UserListTableCellModel.swift */; };
 		AD2E9AB120A4091300B4BE4D /* UserListTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AB020A4091300B4BE4D /* UserListTableCellModelTranslator.swift */; };
@@ -185,7 +185,7 @@
 		AD2E9AA020A2CFC000B4BE4D /* ItemHeaderTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHeaderTableCellModelTranslator.swift; sourceTree = "<group>"; };
 		AD2E9AA220A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemContentsTableCellModelTranslator.swift; sourceTree = "<group>"; };
 		AD2E9AA420A3C99200B4BE4D /* ItemDetailViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewOutput.swift; sourceTree = "<group>"; };
-		AD2E9AA920A4063000B4BE4D /* LikeUserListViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeUserListViewOutput.swift; sourceTree = "<group>"; };
+		AD2E9AA920A4063000B4BE4D /* UserListViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewOutput.swift; sourceTree = "<group>"; };
 		AD2E9AAC20A4069000B4BE4D /* LikeUserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeUserListViewController.swift; sourceTree = "<group>"; };
 		AD2E9AAE20A408B200B4BE4D /* UserListTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableCellModel.swift; sourceTree = "<group>"; };
 		AD2E9AB020A4091300B4BE4D /* UserListTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableCellModelTranslator.swift; sourceTree = "<group>"; };
@@ -531,7 +531,7 @@
 		AD2E9AA820A4061700B4BE4D /* UserFlow */ = {
 			isa = PBXGroup;
 			children = (
-				AD2E9AA920A4063000B4BE4D /* LikeUserListViewOutput.swift */,
+				AD2E9AA920A4063000B4BE4D /* UserListViewOutput.swift */,
 				AD2E9AB820A40E7000B4BE4D /* UserCoordinator.swift */,
 			);
 			path = UserFlow;
@@ -730,7 +730,7 @@
 				AD2E9A9620A287EE00B4BE4D /* ItemDetailHeaderTableCell.swift in Sources */,
 				AD2E9A5220A0061800B4BE4D /* AuthModuleFactory.swift in Sources */,
 				AD2E9A5420A0065200B4BE4D /* ModuleFactory.swift in Sources */,
-				AD2E9AAA20A4063000B4BE4D /* LikeUserListViewOutput.swift in Sources */,
+				AD2E9AAA20A4063000B4BE4D /* UserListViewOutput.swift in Sources */,
 				AD2E9A00209CB1A700B4BE4D /* AlamofireImplementations.swift in Sources */,
 				AD2E9A38209FF73F00B4BE4D /* Router.swift in Sources */,
 				AD2E9A7320A1948600B4BE4D /* ItemModuleFactory.swift in Sources */,
