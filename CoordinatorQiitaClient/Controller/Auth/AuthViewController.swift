@@ -13,6 +13,7 @@ class AuthViewController: UIViewController, LoginViewOutput {
     var onCompleteAuth: ((String) -> Void)?
     var onSkipAuth: (() -> Void)?
     var onLoginButtonTap: (() -> Void)?
+    var deinitHandler: (() -> Void)?
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -38,7 +39,7 @@ class AuthViewController: UIViewController, LoginViewOutput {
         setupViews()
         registerNotification()
     }
-        
+    
     private func setupViews() {
         loginView.loginButton.addTarget(self, action: .tappedLoginButton, for: .touchUpInside)
         loginView.skipAuthButton.addTarget(self, action: .tappedSkipAuthButton, for: .touchUpInside)

@@ -27,6 +27,7 @@ class ItemDetailViewController: UIViewController, ProgressPresentableView, ItemD
     var selectedUserHandler: ((String) -> Void)?
     var selectedLikeHandler: (() -> Bool)?
     var selectedLikeCountHandler: (() -> Void)?
+    var deinitHandler: (() -> Void)?
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -54,10 +55,14 @@ class ItemDetailViewController: UIViewController, ProgressPresentableView, ItemD
         fetchItemData()
     }
     
+    deinit {
+        deinitHandler?()
+    }
+    
     private func setupTableView() {
         let itemHeaderAdapter = TableAdapter<ItemHeaderTableCellModel, ItemDetailHeaderTableCell>()
         
-        itemHeaderAdapter.on.dequeue = { ctx in
+        itemHeaderAdapter.on.dequeue = { [weak self] ctx in
             ctx.cell?.setupCell(with: ctx.model)
             
             ctx.cell?.tappedUserNameButtonHandler = { [weak self] in
@@ -82,7 +87,7 @@ class ItemDetailViewController: UIViewController, ProgressPresentableView, ItemD
         
         let itemContentsAdapter = TableAdapter<ItemContentsTableCellModel, ItemDetailWebTableCell>()
         
-        itemContentsAdapter.on.dequeue = { ctx in
+        itemContentsAdapter.on.dequeue = { [weak self] ctx in
             ctx.cell?.webView.loadHTMLString(ctx.model.htmlBody, baseURL: nil)
             ctx.cell?.finishWebLoadHandler = { [weak self] height in
                 guard let strongSelf = self else {

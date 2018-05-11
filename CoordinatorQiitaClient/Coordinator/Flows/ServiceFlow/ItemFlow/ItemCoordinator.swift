@@ -26,7 +26,13 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         showItemList()
     }
     
-    private func showItemList() {
+    override func start(with option: DeepLinkOption?) {
+        if let id = option?.fetchItemDetailItemId() {
+            showItemDetail(with: id)
+        }
+    }
+    
+    private func showItemList(executeFinishHandler: Bool = false) {
         
         let view = moduleFactory.generateItemListView()
         
@@ -38,15 +44,17 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
             self?.runUserFlow(with: .userDetail(userId))
         }
         
-        view.deinitViewHandler = { [weak self] in
-            self?.finishFlow?()
+        view.deinitHandler = { [weak self] in
+            if executeFinishHandler {
+                self?.finishFlow?()
+            }
         }
         
         router.setRoot(view, hideBar: false)
 
     }
     
-    private func showItemDetail(with itemId: String) {
+    private func showItemDetail(with itemId: String, executeFinishHandler: Bool = false) {
         let view = moduleFactory.generateItemDetailView(itemId: itemId)
         
         view.selectedUserHandler = { [weak self] id in
@@ -64,6 +72,12 @@ final class ItemCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         
         view.selectedLikeCountHandler = { [weak self] in
             self?.runUserFlow(with: .likeUserList(itemId))
+        }
+        
+        view.deinitHandler = { [weak self] in
+            if executeFinishHandler {
+                self?.finishFlow?()
+            }
         }
         
         router.push(view, animated: true, completion: nil)

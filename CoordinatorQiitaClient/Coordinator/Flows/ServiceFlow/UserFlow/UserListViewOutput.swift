@@ -10,5 +10,4 @@ import Foundation
 
 protocol UserListViewOutput: BaseView {
     var selectedUserHandler: ((String) -> Void)? { get set }
-    var deinitHandler: (() -> Void)? { get set }
 }

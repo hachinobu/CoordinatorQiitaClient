@@ -14,7 +14,7 @@ class ItemListViewController: UIViewController, ItemListViewOutput, ProgressPres
     
     var selectedItemHandler: ((String) -> Void)?
     var selectedUserHandler: ((String) -> Void)?
-    var deinitViewHandler: (() -> Void)?
+    var deinitHandler: (() -> Void)?
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -58,7 +58,7 @@ class ItemListViewController: UIViewController, ItemListViewOutput, ProgressPres
     }
     
     deinit {
-        deinitViewHandler?()
+        deinitHandler?()
     }
     
     @objc func refreshData() {

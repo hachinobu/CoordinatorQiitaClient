@@ -13,6 +13,7 @@ class TabbarController: UITabBarController, TabViewOutput {
     var selectedItemTabHandler: ((UINavigationController) -> Void)?
     var selectedTagTabHandler: ((UINavigationController) -> Void)?
     var selectedMypageTabHandler: ((UINavigationController) -> Void)?
+    var deinitHandler: (() -> Void)?
     
     lazy var itemTabNavigationController: UINavigationController = {
         guard let navigationController = viewControllers?[SelectTab.item.rawValue] as? UINavigationController else {

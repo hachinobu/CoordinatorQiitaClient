@@ -6,7 +6,7 @@
 //  Copyright © 2018年 hachinobu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
     
@@ -33,17 +33,19 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         }
         
         if let itemId = option.fetchLikeUserListItemId() {
-            showLikeUserList(with: itemId)
+            showLikeUserList(with: itemId, executeFinishHandler: true)
         } else if let userId = option.fetchUserId() {
-            showUserDetail(with: userId)
+            showUserDetail(with: userId, executeFinishHandler: true)
         }
     }
     
-    private func showLikeUserList(with itemId: String) {
+    private func showLikeUserList(with itemId: String, executeFinishHandler: Bool = false) {
         let view = moduleFactory.generateLikeUserListView(with: itemId)
         
         view.deinitHandler = { [weak self] in
-            self?.finishFlow?()
+            if executeFinishHandler {
+                self?.finishFlow?()
+            }
         }
         
         view.selectedUserHandler = { [weak self] userId in
@@ -53,7 +55,7 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         router.push(view, animated: true, completion: nil)
     }
     
-    private func showUserDetail(with userId: String) {
+    private func showUserDetail(with userId: String, executeFinishHandler: Bool = false) {
         let view = moduleFactory.generateUserDetailView(with: userId)
         
         view.selectedFollowTagHandler = { [weak self] in
@@ -61,23 +63,64 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         }
         
         view.selectedFolloweeHandler = { [weak self] in
-            print("selectedFolloweeHandler")
+            self?.showFolloweeList(with: userId)
         }
         
         view.selectedFollowerHandler = { [weak self] in
-            print("selectedFollowerHandler")
+            self?.showFollowerList(with: userId)
         }
         
         view.selectedItemHandler = { [weak self] itemId in
-            print("selectedFollowerHandler")
+            self?.runItemFlow(with: .itemDetail(itemId))
         }
         
         view.deinitHandler = { [weak self] in
-            self?.finishFlow?()
+            if executeFinishHandler {
+                self?.finishFlow?()
+            }
         }
         
         router.push(view, animated: true, completion: nil)
         
     }
     
+    private func showFolloweeList(with userId: String, executeFinishHandler: Bool = false) {
+        let view = moduleFactory.generateFolloweeUserListView(with: userId)
+        
+        view.selectedUserHandler = { [weak self] userId in
+            self?.showUserDetail(with: userId)
+        }
+        
+        router.push(view, animated: true, completion: nil)
+    }
+    
+    private func showFollowerList(with userId: String) {
+        let view = moduleFactory.generateFollowerUserListView(with: userId)
+        
+        view.selectedUserHandler = { [weak self] userId in
+            self?.showUserDetail(with: userId)
+        }
+                
+        router.push(view, animated: true, completion: nil)
+    }
+    
 }
+
+extension UserCoordinator {
+    
+    private func runItemFlow(with option: DeepLinkOption) {
+        guard let navigationController = router.toPresent() as? UINavigationController else {
+            return
+        }
+        let (presentable, coordinator) = coordinatorFactory.generateItemCoordinatorBox(navigationController: navigationController)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start(with: option)
+        router.push(presentable, animated: true, completion: nil)
+    }
+    
+}
+
+

@@ -13,5 +13,4 @@ protocol UserDetailViewOutput: BaseView {
     var selectedFolloweeHandler: (() -> Void)? { get set }
     var selectedFollowerHandler: (() -> Void)? { get set }
     var selectedItemHandler: ((String) -> Void)? { get set }
-    var deinitHandler: (() -> Void)? { get set }
 }

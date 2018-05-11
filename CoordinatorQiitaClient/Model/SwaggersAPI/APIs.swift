@@ -9,7 +9,12 @@ import Foundation
 open class SwaggerClientAPI {
     open static var basePath = "https://qiita.com"
     open static var credential: URLCredential?
-    open static var customHeaders: [String:String] = [:]
+    open static var customHeaders: [String:String] {
+        if UserDefaults.StringType.value(key: .accessToken).isEmpty {
+            return [:]
+        }
+        return ["Authorization": "Bearer \(UserDefaults.StringType.value(key: .accessToken))"]
+    }
     open static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
 }
 

@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol BaseView: NSObjectProtocol, Presentable {}
+protocol BaseView: NSObjectProtocol, Presentable {
+    var deinitHandler: (() -> Void)? { get set }
+}

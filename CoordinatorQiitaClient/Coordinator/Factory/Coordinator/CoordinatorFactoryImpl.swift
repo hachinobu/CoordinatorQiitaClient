@@ -28,6 +28,13 @@ final class CoordinatorFactoryImpl: CoordinatorFactory {
         return coordinator
     }
     
+    func generateItemCoordinatorBox(navigationController: UINavigationController?) -> (presentable: Presentable?, coordinator: (Coordinator & CoordinatorFinishFlowType)) {
+        let rootController = navigationController ?? UINavigationController()
+        let router = RouterImpl(rootController: rootController)
+        let coordinator = ItemCoordinator(moduleFactory: ModuleFactory(), coordinatorFactory: CoordinatorFactoryImpl(), router: router)
+        return (router, coordinator)
+    }
+    
     func generateUserCoordinatorBox(navigationController: UINavigationController?) -> (presentable: Presentable?, coordinator: (Coordinator & CoordinatorFinishFlowType)) {
         let rootController = navigationController ?? UINavigationController()
         let router = RouterImpl(rootController: rootController)

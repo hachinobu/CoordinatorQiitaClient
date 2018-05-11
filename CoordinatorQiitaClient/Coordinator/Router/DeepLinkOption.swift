@@ -9,8 +9,18 @@
 import Foundation
 
 enum DeepLinkOption {
+    case itemDetail(String)
     case likeUserList(String)
     case userDetail(String)
+    
+    func fetchItemDetailItemId() -> String? {
+        switch self {
+        case .itemDetail(let id):
+            return id
+        default:
+            return nil
+        }
+    }
     
     func fetchLikeUserListItemId() -> String? {
         switch self {

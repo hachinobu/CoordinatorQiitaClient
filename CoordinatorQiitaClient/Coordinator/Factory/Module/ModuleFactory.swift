@@ -47,6 +47,16 @@ extension ModuleFactory: UserModuleFactory {
         return view
     }
     
+    func generateFolloweeUserListView(with userId: String) -> UserListViewOutput {
+        let view = FolloweeListViewController(title: "フォローしている人", userId: userId)
+        return view
+    }
+    
+    func generateFollowerUserListView(with userId: String) -> UserListViewOutput {
+        let view = FollowerListViewController(title: "フォローされている人", userId: userId)
+        return view
+    }
+    
     func generateUserDetailView(with userId: String) -> UserDetailViewOutput {
         let view = UserDetailViewController(title: userId, userId: userId)
         return view

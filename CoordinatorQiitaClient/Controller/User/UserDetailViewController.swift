@@ -11,7 +11,6 @@ import FlowKitManager
 import Hydra
 
 class UserDetailViewController: UIViewController, ProgressPresentableView, UserDetailViewOutput {
-    
     var selectedFollowTagHandler: (() -> Void)?
     var selectedFolloweeHandler: (() -> Void)?
     var selectedFollowerHandler: (() -> Void)?
@@ -62,7 +61,7 @@ class UserDetailViewController: UIViewController, ProgressPresentableView, UserD
     
     private func setupTableView() {
         let userHeaderAdapter = TableAdapter<UserHeaderTableCellModel ,UserDetailTableCell>()
-        userHeaderAdapter.on.dequeue = { ctx in
+        userHeaderAdapter.on.dequeue = { [weak self] ctx in
             ctx.cell?.setupCell(with: ctx.model)
             
             ctx.cell?.tappedFollowTagList = { [weak self] in
@@ -83,18 +82,21 @@ class UserDetailViewController: UIViewController, ProgressPresentableView, UserD
             ctx.cell?.setupCell(with: ctx.model)
         }
         
-        itemAdapter.on.willDisplay = { [unowned self] ctx in
-            if self.itemModels.count == 0 {
+        itemAdapter.on.willDisplay = { [weak self] ctx in
+            guard let strongSelf = self else {
                 return
             }
-            let border = self.itemModels.count - 1
-            if ctx.indexPath.row == border {
-                self.fetchMoreItemData()
+            if strongSelf.itemModels.count == 0 {
+                return
+            }
+            let border = strongSelf.itemModels.count - 1
+            if ctx.indexPath.row == border && strongSelf.moreLoadData {
+                strongSelf.fetchMoreItemData()
             }
         }
         
-        itemAdapter.on.tap = { [unowned self] ctx in
-            self.selectedItemHandler?(ctx.model.itemId)
+        itemAdapter.on.tap = { [weak self] ctx in
+            self?.selectedItemHandler?(ctx.model.itemId)
             return .deselectAnimated
         }
         
@@ -137,8 +139,8 @@ extension UserDetailViewController {
     }
     
     private func fetchUserDetailPromise() -> Promise<UserHeaderTableCellModel> {
-        return Promise<UserHeaderTableCellModel> { [unowned self] resolve, reject, _ in
-            UserAPI.fetchUserDetailByUserId(id: self.userId, completion: { (user, error) in
+        return Promise<UserHeaderTableCellModel> { [weak self] resolve, reject, _ in
+            UserAPI.fetchUserDetailByUserId(id: self!.userId, completion: { (user, error) in
                 guard let user = user else {
                     reject(error!)
                     return
@@ -150,18 +152,18 @@ extension UserDetailViewController {
     }
     
     private func fetchItemsPromise() -> Promise<[ItemListTableCellModel]> {
-        return Promise<[ItemListTableCellModel]> { [unowned self] resolve, reject, _ in
-            ItemAPI.fetchItemsByUserId(id: self.userId, page: self.currentPage, perPage: 20, completion: { (items, error) in
+        return Promise<[ItemListTableCellModel]> { [weak self] resolve, reject, _ in
+            ItemAPI.fetchItemsByUserId(id: self!.userId, page: self!.currentPage, perPage: 20, completion: { (items, error) in
                 guard let items = items else {
                     reject(error!)
                     return
                 }
                 if items.count == 0 {
-                    self.moreLoadData = false
+                    self?.moreLoadData = false
                     resolve([])
                     return
                 }
-                self.currentPage = self.currentPage + 1
+                self?.currentPage = self!.currentPage + 1
                 let models = items.translate(translatable: ItemListTableCellModelTranslator())
                 resolve(models)
             })
