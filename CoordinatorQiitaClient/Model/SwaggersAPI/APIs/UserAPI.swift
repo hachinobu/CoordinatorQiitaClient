@@ -48,6 +48,17 @@ class UserAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     
+    class func fetchAuthUserWithRequestBuilder() -> RequestBuilder<User> {
+        let path = "/api/v2/authenticated_user"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String: Any]? = nil
+        
+        let url = NSURLComponents(string: URLString)
+        
+        let requestBuilder: RequestBuilder<User>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    
 }
 
 extension UserAPI {
@@ -66,6 +77,12 @@ extension UserAPI {
     
     class func fetchFollowersByUserId(id: String, page: Int = 1, perPage: Int = 100, completion: @escaping ((_ data: [User]?, _ error: Error?) -> Void)) {
         fetchFollowersByUserIdWithRequestBuilder(userId: id, page: page, perPage: perPage).execute { (response, error) in
+            completion(response?.body, error)
+        }
+    }
+    
+    class func fetchAuthUser(completion: @escaping ((_ data: User?, _ error: Error?) -> Void)) {
+        fetchAuthUserWithRequestBuilder().execute { (response, error) in
             completion(response?.body, error)
         }
     }

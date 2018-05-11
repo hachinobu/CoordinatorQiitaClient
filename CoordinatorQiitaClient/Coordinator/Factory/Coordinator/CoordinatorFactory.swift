@@ -19,4 +19,6 @@ protocol CoordinatorFactory {
     
     func generateTagCoordinator(navigationController: UINavigationController) -> Coordinator & CoordinatorFinishFlowType
     func generateTagCoordinatorBox(navigationController: UINavigationController?) -> (presentable: Presentable?, coordinator: (Coordinator & CoordinatorFinishFlowType))
+    
+    func generateMypageCoordinator(navigationController: UINavigationController) -> Coordinator & CoordinatorFinishFlowType
 }

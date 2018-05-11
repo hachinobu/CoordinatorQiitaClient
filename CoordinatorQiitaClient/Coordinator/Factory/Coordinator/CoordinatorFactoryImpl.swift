@@ -55,4 +55,10 @@ final class CoordinatorFactoryImpl: CoordinatorFactory {
         return (router, coordinator)
     }
     
+    func generateMypageCoordinator(navigationController: UINavigationController) -> Coordinator & CoordinatorFinishFlowType {
+        let router = RouterImpl(rootController: navigationController)
+        let coordinator = MypageCoordinator(moduleFactory: ModuleFactory(), coordinatorFactory: CoordinatorFactoryImpl(), router: router)
+        return coordinator
+    }
+    
 }

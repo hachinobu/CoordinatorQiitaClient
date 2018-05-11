@@ -90,7 +90,16 @@ extension TabbarCoordinator {
     }
     
     private func runMypageTabFlow(with navigationController: UINavigationController) {
-        
+        guard navigationController.viewControllers.isEmpty else {
+            return
+        }
+        let coordinator = coordinatorFactory.generateMypageCoordinator(navigationController: navigationController)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.removeDependency(coordinator)
+            self?.start()
+        }
+        addDependency(coordinator)
+        coordinator.start()
     }
     
     private func runAuthFlow(with navigationController: UINavigationController) {

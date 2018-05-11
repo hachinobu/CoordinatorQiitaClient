@@ -109,6 +109,10 @@
 		AD2E9AE120A52FD200B4BE4D /* TagCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE020A52FD200B4BE4D /* TagCoordinator.swift */; };
 		AD2E9AE320A5356E00B4BE4D /* UserFollowTagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE220A5356E00B4BE4D /* UserFollowTagListViewController.swift */; };
 		AD2E9AE520A53F0600B4BE4D /* TagItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE420A53F0600B4BE4D /* TagItemListViewController.swift */; };
+		AD2E9AE820A54A7100B4BE4D /* MypageViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE720A54A7100B4BE4D /* MypageViewOutput.swift */; };
+		AD2E9AEA20A54AE400B4BE4D /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE920A54AE400B4BE4D /* MypageViewController.swift */; };
+		AD2E9AEC20A54E1400B4BE4D /* MypageModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AEB20A54E1400B4BE4D /* MypageModuleFactory.swift */; };
+		AD2E9AEE20A54EDE00B4BE4D /* MypageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AED20A54EDE00B4BE4D /* MypageCoordinator.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -230,6 +234,10 @@
 		AD2E9AE020A52FD200B4BE4D /* TagCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCoordinator.swift; sourceTree = "<group>"; };
 		AD2E9AE220A5356E00B4BE4D /* UserFollowTagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTagListViewController.swift; sourceTree = "<group>"; };
 		AD2E9AE420A53F0600B4BE4D /* TagItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItemListViewController.swift; sourceTree = "<group>"; };
+		AD2E9AE720A54A7100B4BE4D /* MypageViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewOutput.swift; sourceTree = "<group>"; };
+		AD2E9AE920A54AE400B4BE4D /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		AD2E9AEB20A54E1400B4BE4D /* MypageModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModuleFactory.swift; sourceTree = "<group>"; };
+		AD2E9AED20A54EDE00B4BE4D /* MypageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCoordinator.swift; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -462,6 +470,7 @@
 				AD2E9A7220A1948600B4BE4D /* ItemModuleFactory.swift */,
 				AD2E9AB620A40D9F00B4BE4D /* UserModuleFactory.swift */,
 				AD2E9ADE20A52F3100B4BE4D /* TagModuleFactory.swift */,
+				AD2E9AEB20A54E1400B4BE4D /* MypageModuleFactory.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -478,6 +487,7 @@
 		AD2E9A6620A1886A00B4BE4D /* ServiceFlow */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9AE620A54A4900B4BE4D /* MypageFlow */,
 				AD2E9ACE20A529D300B4BE4D /* TagFlow */,
 				AD2E9AA820A4061700B4BE4D /* UserFlow */,
 				AD2E9A7420A194C800B4BE4D /* ItemFlow */,
@@ -498,6 +508,7 @@
 		AD2E9A6A20A18A0200B4BE4D /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9AE920A54AE400B4BE4D /* MypageViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -613,6 +624,15 @@
 				AD2E9AE420A53F0600B4BE4D /* TagItemListViewController.swift */,
 			);
 			path = Tag;
+			sourceTree = "<group>";
+		};
+		AD2E9AE620A54A4900B4BE4D /* MypageFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E9AE720A54A7100B4BE4D /* MypageViewOutput.swift */,
+				AD2E9AED20A54EDE00B4BE4D /* MypageCoordinator.swift */,
+			);
+			path = MypageFlow;
 			sourceTree = "<group>";
 		};
 		D846FC480BB7DD7E1D240E6C /* Pods */ = {
@@ -786,10 +806,12 @@
 				AD2E9A6C20A18A5000B4BE4D /* TabbarController.swift in Sources */,
 				AD2E9AC320A41F2B00B4BE4D /* UserDetailViewController.swift in Sources */,
 				AD2E9A8B20A27BF500B4BE4D /* ProgressPresentableView.swift in Sources */,
+				AD2E9AEC20A54E1400B4BE4D /* MypageModuleFactory.swift in Sources */,
 				AD2E9AD520A52A8400B4BE4D /* AllTagListViewController.swift in Sources */,
 				AD2E9A06209CB1A800B4BE4D /* APIHelper.swift in Sources */,
 				AD2E9A0D209CBA5D00B4BE4D /* ItemAPI.swift in Sources */,
 				AD2E9A11209CC4C100B4BE4D /* AuthenticationInfo.swift in Sources */,
+				AD2E9AEA20A54AE400B4BE4D /* MypageViewController.swift in Sources */,
 				AD2E9AE120A52FD200B4BE4D /* TagCoordinator.swift in Sources */,
 				AD2E9A5620A0076B00B4BE4D /* AuthCoordinator.swift in Sources */,
 				AD2E9A5D20A00F0100B4BE4D /* ApplicationCoordinator.swift in Sources */,
@@ -829,12 +851,14 @@
 				AD2E9A5F20A0171A00B4BE4D /* AuthViewController.swift in Sources */,
 				AD2E9A6820A188BD00B4BE4D /* TabViewOutput.swift in Sources */,
 				AD2E9A9F20A2C5A000B4BE4D /* ItemContentsTableCellModel.swift in Sources */,
+				AD2E9AE820A54A7100B4BE4D /* MypageViewOutput.swift in Sources */,
 				AD2E9AA120A2CFC100B4BE4D /* ItemHeaderTableCellModelTranslator.swift in Sources */,
 				AD2E99BE209988D800B4BE4D /* AppDelegate.swift in Sources */,
 				AD2E9AC120A41E2800B4BE4D /* FolloweeListViewController.swift in Sources */,
 				AD2E9A05209CB1A800B4BE4D /* JSONEncodingHelper.swift in Sources */,
 				AD2E9A04209CB1A800B4BE4D /* Configuration.swift in Sources */,
 				AD2E9ADF20A52F3100B4BE4D /* TagModuleFactory.swift in Sources */,
+				AD2E9AEE20A54EDE00B4BE4D /* MypageCoordinator.swift in Sources */,
 				AD2E9A26209FF22600B4BE4D /* StoryboardInstantiatable.swift in Sources */,
 				AD2E9A36209FF71500B4BE4D /* Presentable.swift in Sources */,
 				AD2E9A5920A0081E00B4BE4D /* CoordinatorFactory.swift in Sources */,

@@ -84,3 +84,13 @@ extension ModuleFactory: TagModuleFactory {
     
 }
 
+extension ModuleFactory: MypageModuleFactory {
+    
+    func generateMypageView() -> MypageViewOutput {
+        let view = MypageViewController(title: "マイページ")
+        return view
+    }
+    
+}
+
+

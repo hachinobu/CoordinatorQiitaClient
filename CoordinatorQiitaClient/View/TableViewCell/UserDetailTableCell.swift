@@ -25,6 +25,7 @@ final class UserDetailTableCell: UITableViewCell {
     var tappedFollowTagList: (() -> Void)?
     var tappedFolloweeList: (() -> Void)?
     var tappedFollowerList: (() -> Void)?
+    var tappedLogout: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,6 +34,7 @@ final class UserDetailTableCell: UITableViewCell {
         logoutButton.layer.cornerRadius = 4.0
         logoutButton.layer.masksToBounds = true
         logoutButton.setTitle("ログアウト", for: .normal)
+        logoutButton.addTarget(self, action: .tappedLogout, for: .touchUpInside)
         followTagListButton.addTarget(self, action: .tappedFollowTag, for: .touchUpInside)
         followeeUserCountLabel.addTarget(self, action: .tappedFollowee, for: .touchUpInside)
         followerUserCountLabel.addTarget(self, action: .tappedFollower, for: .touchUpInside)
@@ -71,6 +73,10 @@ final class UserDetailTableCell: UITableViewCell {
     @objc func tappedFollower(_ sender: Any) {
         tappedFollowerList?()
     }
+    
+    @objc func tappedLogout(_ sender: Any) {
+        tappedLogout?()
+    }
 
 }
 
@@ -78,6 +84,7 @@ private extension Selector {
     static let tappedFollowTag = #selector(UserDetailTableCell.tappedFollowTag(_:))
     static let tappedFollowee = #selector(UserDetailTableCell.tappedFollowee(_:))
     static let tappedFollower = #selector(UserDetailTableCell.tappedFollower(_:))
+    static let tappedLogout = #selector(UserDetailTableCell.tappedLogout(_:))
 }
 
 
