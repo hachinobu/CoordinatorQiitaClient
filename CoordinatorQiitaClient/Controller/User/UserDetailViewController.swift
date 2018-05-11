@@ -75,6 +75,9 @@ class UserDetailViewController: UIViewController, ProgressPresentableView, UserD
             ctx.cell?.tappedFollowerList = { [weak self] in
                 self?.selectedFollowerHandler?()
             }
+            
+            ctx.cell?.logoutButton.heightAnchor.constraint(equalToConstant: 0.0).isActive = true
+            
         }
         
         let itemAdapter = TableAdapter<ItemListTableCellModel, ItemListTableCell>()
