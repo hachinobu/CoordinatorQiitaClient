@@ -13,4 +13,5 @@ protocol UserModuleFactory {
     func generateFolloweeUserListView(with userId: String) -> UserListViewOutput
     func generateFollowerUserListView(with userId: String) -> UserListViewOutput
     func generateUserDetailView(with userId: String) -> UserDetailViewOutput
+    func generateUserFollowTagListView(with userId: String) -> TagListViewOutput
 }

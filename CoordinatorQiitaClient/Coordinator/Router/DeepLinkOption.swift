@@ -13,6 +13,7 @@ enum DeepLinkOption {
     case likeUserList(String)
     case userDetail(String)
     case userFollowTag(String)
+    case tagItemList(String)
     
     func fetchItemDetailItemId() -> String? {
         switch self {
@@ -44,6 +45,15 @@ enum DeepLinkOption {
     func fetchFollowTagUserId() -> String? {
         switch self {
         case .userFollowTag(let id):
+            return id
+        default:
+            return nil
+        }
+    }
+    
+    func fetchTagItemListTagId() -> String? {
+        switch self {
+        case .tagItemList(let id):
             return id
         default:
             return nil

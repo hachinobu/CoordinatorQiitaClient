@@ -107,7 +107,8 @@
 		AD2E9ADD20A52B8400B4BE4D /* TagListTableCellModelTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9ADC20A52B8400B4BE4D /* TagListTableCellModelTranslator.swift */; };
 		AD2E9ADF20A52F3100B4BE4D /* TagModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9ADE20A52F3100B4BE4D /* TagModuleFactory.swift */; };
 		AD2E9AE120A52FD200B4BE4D /* TagCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE020A52FD200B4BE4D /* TagCoordinator.swift */; };
-		AD2E9AE320A5356E00B4BE4D /* FollowTagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE220A5356E00B4BE4D /* FollowTagListViewController.swift */; };
+		AD2E9AE320A5356E00B4BE4D /* UserFollowTagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE220A5356E00B4BE4D /* UserFollowTagListViewController.swift */; };
+		AD2E9AE520A53F0600B4BE4D /* TagItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E9AE420A53F0600B4BE4D /* TagItemListViewController.swift */; };
 		F146F278E400B6563DFD3F93 /* Pods_CoordinatorQiitaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76233FD426DE3948275D71E3 /* Pods_CoordinatorQiitaClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -227,7 +228,8 @@
 		AD2E9ADC20A52B8400B4BE4D /* TagListTableCellModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListTableCellModelTranslator.swift; sourceTree = "<group>"; };
 		AD2E9ADE20A52F3100B4BE4D /* TagModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModuleFactory.swift; sourceTree = "<group>"; };
 		AD2E9AE020A52FD200B4BE4D /* TagCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCoordinator.swift; sourceTree = "<group>"; };
-		AD2E9AE220A5356E00B4BE4D /* FollowTagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTagListViewController.swift; sourceTree = "<group>"; };
+		AD2E9AE220A5356E00B4BE4D /* UserFollowTagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTagListViewController.swift; sourceTree = "<group>"; };
+		AD2E9AE420A53F0600B4BE4D /* TagItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItemListViewController.swift; sourceTree = "<group>"; };
 		BF31CE512A64B9E1199D1554 /* Pods-CoordinatorQiitaClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.release.xcconfig"; sourceTree = "<group>"; };
 		E18EDF9AA0FBD11844B97B06 /* Pods-CoordinatorQiitaClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorQiitaClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoordinatorQiitaClient/Pods-CoordinatorQiitaClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -586,6 +588,7 @@
 		AD2E9AAB20A4067200B4BE4D /* User */ = {
 			isa = PBXGroup;
 			children = (
+				AD2E9AE220A5356E00B4BE4D /* UserFollowTagListViewController.swift */,
 				AD2E9AAC20A4069000B4BE4D /* LikeUserListViewController.swift */,
 				AD2E9ABE20A41D1B00B4BE4D /* FollowerListViewController.swift */,
 				AD2E9AC020A41E2800B4BE4D /* FolloweeListViewController.swift */,
@@ -607,7 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				AD2E9AD420A52A8400B4BE4D /* AllTagListViewController.swift */,
-				AD2E9AE220A5356E00B4BE4D /* FollowTagListViewController.swift */,
+				AD2E9AE420A53F0600B4BE4D /* TagItemListViewController.swift */,
 			);
 			path = Tag;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				AD2E9A8320A1CCFD00B4BE4D /* Translatable.swift in Sources */,
 				AD2E9ABB20A40F5800B4BE4D /* DeepLinkOption.swift in Sources */,
 				AD2E9A5B20A00E6C00B4BE4D /* CoordinatorFactoryImpl.swift in Sources */,
+				AD2E9AE520A53F0600B4BE4D /* TagItemListViewController.swift in Sources */,
 				AD2E9A03209CB1A800B4BE4D /* JSONEncodableEncoding.swift in Sources */,
 				AD2E9AD020A529E900B4BE4D /* TagListViewOutput.swift in Sources */,
 				AD2E9A02209CB1A800B4BE4D /* CodableHelper.swift in Sources */,
@@ -848,7 +852,7 @@
 				AD2E9AA320A2D16D00B4BE4D /* ItemContentsTableCellModelTranslator.swift in Sources */,
 				AD2E9ADD20A52B8400B4BE4D /* TagListTableCellModelTranslator.swift in Sources */,
 				AD2E9AAF20A408B200B4BE4D /* UserListTableCellModel.swift in Sources */,
-				AD2E9AE320A5356E00B4BE4D /* FollowTagListViewController.swift in Sources */,
+				AD2E9AE320A5356E00B4BE4D /* UserFollowTagListViewController.swift in Sources */,
 				AD2E9A31209FF63700B4BE4D /* Coordinator.swift in Sources */,
 				AD2E9A33209FF6A600B4BE4D /* CoordinatorFinishFlowType.swift in Sources */,
 				AD2E9A0F209CC11000B4BE4D /* LikeUser.swift in Sources */,

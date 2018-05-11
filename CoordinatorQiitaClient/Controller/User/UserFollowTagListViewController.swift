@@ -9,7 +9,7 @@
 import UIKit
 import FlowKitManager
 
-class FollowTagListViewController: UIViewController, ProgressPresentableView, TagListViewOutput {
+class UserFollowTagListViewController: UIViewController, ProgressPresentableView, TagListViewOutput {
 
     var selectedTagHandler: ((String) -> Void)?
     var deinitHandler: (() -> Void)?

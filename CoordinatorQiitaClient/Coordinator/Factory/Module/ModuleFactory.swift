@@ -39,6 +39,7 @@ extension ModuleFactory: ItemModuleFactory {
         let view = ItemDetailViewController(title: "詳細", itemId: itemId)
         return view
     }
+    
 }
 
 extension ModuleFactory: UserModuleFactory {
@@ -62,6 +63,11 @@ extension ModuleFactory: UserModuleFactory {
         return view
     }
     
+    func generateUserFollowTagListView(with userId: String) -> TagListViewOutput {
+        let view = UserFollowTagListViewController(title: userId, userId: userId)
+        return view
+    }
+    
 }
 
 extension ModuleFactory: TagModuleFactory {
@@ -71,8 +77,8 @@ extension ModuleFactory: TagModuleFactory {
         return view
     }
     
-    func generateFollowTagListView(with userId: String) -> TagListViewOutput {
-        let view = FollowTagListViewController(title: userId, userId: userId)
+    func generateTagItemListView(with tagId: String) -> ItemListViewOutput {
+        let view = TagItemListViewController(title: tagId, tagId: tagId)
         return view
     }
     

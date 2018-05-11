@@ -10,5 +10,5 @@ import Foundation
 
 protocol TagModuleFactory {
     func generateAllTagListView() -> TagListViewOutput
-    func generateFollowTagListView(with userId: String) -> TagListViewOutput
+    func generateTagItemListView(with tagId: String) -> ItemListViewOutput
 }
