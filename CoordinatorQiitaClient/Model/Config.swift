@@ -15,8 +15,8 @@ struct Config {
     }
     
     struct AuthInfo {
-        static let clientId: String = "4351f64ee46f84d8702d18dac8ebe34897b97743"
-        static let clientSecret: String = "2891c3bebcceddf67c9ebc8bac7f528c8db2f830"
+        static let clientId: String = "hoge"
+        static let clientSecret: String = "fuga"
         static let accessTokenState: String = "F355968FDEB05B26"
         static let redirectUrlScheme: String = "qiita"
     }
