@@ -63,3 +63,18 @@ extension ModuleFactory: UserModuleFactory {
     }
     
 }
+
+extension ModuleFactory: TagModuleFactory {
+    
+    func generateAllTagListView() -> TagListViewOutput {
+        let view = AllTagListViewController(title: "タグ一覧")
+        return view
+    }
+    
+    func generateFollowTagListView(with userId: String) -> TagListViewOutput {
+        let view = FollowTagListViewController(title: userId, userId: userId)
+        return view
+    }
+    
+}
+

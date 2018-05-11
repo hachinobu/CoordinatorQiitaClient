@@ -76,7 +76,7 @@ class TagAPI {
 
 extension TagAPI {
     
-    class func fetchAllTags(id: String, page: Int = 1, perPage: Int = 20, sort: TagSort = .count, completion: @escaping ((_ data: [Tag]?, _ error: Error?) -> Void)) {
+    class func fetchAllTags(page: Int = 1, perPage: Int = 20, sort: TagSort = .count, completion: @escaping ((_ data: [Tag]?, _ error: Error?) -> Void)) {
         fetchAllTagsWithRequestBuilder(page: page, perPage: perPage, sort: sort).execute { (response, error) in
             completion(response?.body, error)
         }

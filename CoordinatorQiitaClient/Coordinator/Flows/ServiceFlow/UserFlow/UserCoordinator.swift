@@ -59,7 +59,7 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         let view = moduleFactory.generateUserDetailView(with: userId)
         
         view.selectedFollowTagHandler = { [weak self] in
-            print("selectedFollowTagHandler")
+            self?.runTagFlow(with: .userFollowTag(userId))
         }
         
         view.selectedFolloweeHandler = { [weak self] in
@@ -100,7 +100,7 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         view.selectedUserHandler = { [weak self] userId in
             self?.showUserDetail(with: userId)
         }
-                
+        
         router.push(view, animated: true, completion: nil)
     }
     
@@ -113,6 +113,19 @@ extension UserCoordinator {
             return
         }
         let (presentable, coordinator) = coordinatorFactory.generateItemCoordinatorBox(navigationController: navigationController)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start(with: option)
+        router.push(presentable, animated: true, completion: nil)
+    }
+    
+    private func runTagFlow(with option: DeepLinkOption) {
+        guard let navigationController = router.toPresent() as? UINavigationController else {
+            return
+        }
+        let (presentable, coordinator) = coordinatorFactory.generateTagCoordinatorBox(navigationController: navigationController)
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.removeDependency(coordinator)
         }

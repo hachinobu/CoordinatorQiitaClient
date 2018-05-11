@@ -42,4 +42,17 @@ final class CoordinatorFactoryImpl: CoordinatorFactory {
         return (router, coordinator)
     }
     
+    func generateTagCoordinator(navigationController: UINavigationController) -> Coordinator & CoordinatorFinishFlowType {
+        let router = RouterImpl(rootController: navigationController)
+        let coordinator = TagCoordinator(moduleFactory: ModuleFactory(), coordinatorFactory: CoordinatorFactoryImpl(), router: router)
+        return coordinator
+    }
+    
+    func generateTagCoordinatorBox(navigationController: UINavigationController?) -> (presentable: Presentable?, coordinator: (Coordinator & CoordinatorFinishFlowType)) {
+        let rootController = navigationController ?? UINavigationController()
+        let router = RouterImpl(rootController: rootController)
+        let coordinator = TagCoordinator(moduleFactory: ModuleFactory(), coordinatorFactory: CoordinatorFactoryImpl(), router: router)
+        return (router, coordinator)
+    }
+    
 }

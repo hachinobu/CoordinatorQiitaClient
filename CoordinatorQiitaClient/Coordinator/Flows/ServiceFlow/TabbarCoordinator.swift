@@ -56,7 +56,7 @@ final class TabbarCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
                                                  tagTabHandler: tagTabHandler,
                                                  mypageTabHandler: mypageTabHandler)
         
-        router.setRoot(view, hideBar: true)        
+        router.setRoot(view, hideBar: true)
     }
     
 }
@@ -70,14 +70,23 @@ extension TabbarCoordinator {
         let coordinator = coordinatorFactory.generateItemCoordinator(navigationController: navigationController)
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.removeDependency(coordinator)
-            coordinator?.start()
+            self?.start()
         }
         addDependency(coordinator)
         coordinator.start()
     }
     
     private func runTagTabFlow(with navigationController: UINavigationController) {
-        
+        guard navigationController.viewControllers.isEmpty else {
+            return
+        }
+        let coordinator = coordinatorFactory.generateTagCoordinator(navigationController: navigationController)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.removeDependency(coordinator)
+            self?.start()
+        }
+        addDependency(coordinator)
+        coordinator.start()
     }
     
     private func runMypageTabFlow(with navigationController: UINavigationController) {
