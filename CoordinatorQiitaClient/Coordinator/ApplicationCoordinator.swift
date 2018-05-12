@@ -47,6 +47,7 @@ extension ApplicationCoordinator {
         let coordinator = coordinatorFactory.generateTabBarCoordinator(router: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.removeDependency(coordinator)
+            self?.finishLogin = false
             self?.start()
         }
         addDependency(coordinator)

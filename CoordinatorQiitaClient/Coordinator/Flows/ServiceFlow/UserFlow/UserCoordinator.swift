@@ -38,6 +38,10 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
             showUserDetail(with: userId, executeFinishHandler: true)
         } else if let userId = option.fetchFollowTagUserId() {
             showUserFollowTagList(with: userId, executeFinishHandler: true)
+        } else if let userId = option.fetchFolloweeUserListUserId() {
+            showFolloweeList(with: userId, executeFinishHandler: true)
+        } else if let userId = option.fetchFollowerUserListUserId() {
+            showFollowerList(with: userId, executeFinishHandler: true)
         }
     }
     
@@ -96,7 +100,7 @@ final class UserCoordinator: BaseCoordinator, CoordinatorFinishFlowType {
         router.push(view, animated: true, completion: nil)
     }
     
-    private func showFollowerList(with userId: String) {
+    private func showFollowerList(with userId: String, executeFinishHandler: Bool = false) {
         let view = moduleFactory.generateFollowerUserListView(with: userId)
         
         view.selectedUserHandler = { [weak self] userId in

@@ -14,7 +14,7 @@ struct UserHeaderTableCellModel: ModelProtocol, Equatable, Hashable {
     var identifier: Int
     
     var profileURL: URL?
-    var userId: String?
+    var userId: String
     var userName: String?
     var company: String?
     var itemCount: String?

@@ -8,6 +8,10 @@
 
 import Foundation
 
-protocol MypageViewOutput: UserDetailViewOutput {
+protocol MypageViewOutput: BaseView {
+    var selectedFollowTagHandler: ((String) -> Void)? { get set }
+    var selectedFolloweeHandler: ((String) -> Void)? { get set }
+    var selectedFollowerHandler: ((String) -> Void)? { get set }
+    var selectedItemHandler: ((String) -> Void)? { get set }
     var selectedLogoutHandler: (() -> Void)? { get set }
 }

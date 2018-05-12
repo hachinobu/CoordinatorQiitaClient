@@ -12,9 +12,9 @@ import Hydra
 
 class MypageViewController: UIViewController, ProgressPresentableView, MypageViewOutput {
 
-    var selectedFollowTagHandler: (() -> Void)?
-    var selectedFolloweeHandler: (() -> Void)?
-    var selectedFollowerHandler: (() -> Void)?
+    var selectedFollowTagHandler: ((String) -> Void)?
+    var selectedFolloweeHandler: ((String) -> Void)?
+    var selectedFollowerHandler: ((String) -> Void)?
     var selectedItemHandler: ((String) -> Void)?
     var selectedLogoutHandler: (() -> Void)?
     var deinitHandler: (() -> Void)?
@@ -64,15 +64,15 @@ class MypageViewController: UIViewController, ProgressPresentableView, MypageVie
             ctx.cell?.setupCell(with: ctx.model)
             
             ctx.cell?.tappedFollowTagList = { [weak self] in
-                self?.selectedFollowTagHandler?()
+                self?.selectedFollowTagHandler?(ctx.model.userId)
             }
             
             ctx.cell?.tappedFolloweeList = { [weak self] in
-                self?.selectedFolloweeHandler?()
+                self?.selectedFolloweeHandler?(ctx.model.userId)
             }
             
             ctx.cell?.tappedFollowerList = { [weak self] in
-                self?.selectedFollowerHandler?()
+                self?.selectedFollowerHandler?(ctx.model.userId)
             }
             
             ctx.cell?.tappedLogout = { [weak self] in
